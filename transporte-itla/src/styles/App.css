@@ -1,0 +1,8 @@
+body {
+  background: #1b75ae;
+}
+
+.text-center,
+.text-center a {
+  color: white !important;
+}
