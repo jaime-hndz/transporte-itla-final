@@ -1,0 +1,12 @@
+body{
+    background: #1b75ae !important;
+}
+
+.image-login {
+    margin: 0 auto;
+}
+
+.container-login {
+    max-width: 300px;
+    background-color: 'red';
+}
