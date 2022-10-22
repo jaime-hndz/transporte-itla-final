@@ -1,41 +1,49 @@
+import HomeIcon from '@mui/icons-material/Home';
+import ConfirmationNumberIcon from '@mui/icons-material/ConfirmationNumber';
+import LocalActivityIcon from '@mui/icons-material/LocalActivity';
+import PointOfSaleIcon from '@mui/icons-material/PointOfSale';
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
+
 export const StudentOptions = [
     {
-        name: 'inicio',
-        label: 'Inicio',
-        icono: 'Home'
+        text: 'Inicio',
+        path: '/',
+        icon: <HomeIcon />
     },
     {
-        name: 'solicitudes',
-        label: 'Ver solicitudes',
-        icono: 'Home'
+        text: 'Ver solicitudes',
+        path: '/solicitudes',
+        icon: <ConfirmationNumberIcon />
     },
     {
-        name: 'tickets',
-        label: 'Tickets Reservados',
-        icono: 'Home'
+        text: 'Tickets Reservados',
+        path: '/tickets',
+        icon: <LocalActivityIcon />
     },
     {
-        name: 'formas',
-        label: 'Formas de pago',
-        icono: 'Home'
-    },    {
-        name: 'horarios',
-        label: 'Horarios',
-        icono: 'Home'
+        text: 'Formas de pago',
+        path: '/formas',
+        icon: <PointOfSaleIcon />
+    },    
+    {
+        text: 'Horarios',
+        path: '/horarios',
+        icon: <AccessTimeIcon />
     }  
   
 ]
 
 export const AdminOptions = [
     {
-        name: 'inicio',
-        label: 'Inicio',
-        icono: 'Home'
+        text: 'Inicio',
+        path: '/',
+        icon: <HomeIcon />
     },
     {
-        name: 'administrar',
-        label: 'Administrar viajes',
-        icono: 'Home'
+        text: 'Administrar viajes',
+        path: '/administrar',
+        icon: <AdminPanelSettingsIcon />
     },
   
 ]
