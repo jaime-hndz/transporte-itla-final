@@ -27,7 +27,7 @@ export const Login = () => {
     */
     e.preventDefault()
     if(formValues.user === 'jaime' && formValues.pass === '1'){
-      window.location.href="./Home"
+      window.location.href="./"
     }else{
       alert("El usuario o la contraseña no son correctas")
     }
