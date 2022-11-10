@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using transporte_backend.Models;
 
 namespace transporte_backend.Models
 {
@@ -14,6 +15,8 @@ namespace transporte_backend.Models
         public string Nombre { get; set; } = null!;
         public string Apellido { get; set; } = null!;
         public int IdTipo { get; set; }
+        public string Contra { get; set; } = null!;
+        public string Email { get; set; } = null!;
 
         public virtual Tipo IdTipoNavigation { get; set; } = null!;
         public virtual ICollection<Estudiante> Estudiantes { get; set; }

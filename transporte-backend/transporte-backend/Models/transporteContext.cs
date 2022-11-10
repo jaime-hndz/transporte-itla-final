@@ -30,7 +30,7 @@ namespace transporte_backend.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Server=LAPTOP-O4IATO9T\\MSSQLSERVER01;Database=transporte; Trusted_Connection=true;");
+                optionsBuilder.UseSqlServer("Server=.\\MSSQLSERVER01;Database=transporte; Trusted_Connection=true;");
             }
         }
 
@@ -176,6 +176,16 @@ namespace transporte_backend.Models
                     .HasMaxLength(255)
                     .IsUnicode(false)
                     .HasColumnName("apellido");
+
+                entity.Property(e => e.Contra)
+                    .HasMaxLength(255)
+                    .IsUnicode(false)
+                    .HasColumnName("contra");
+
+                entity.Property(e => e.Email)
+                    .HasMaxLength(255)
+                    .IsUnicode(false)
+                    .HasColumnName("email");
 
                 entity.Property(e => e.IdTipo).HasColumnName("id_tipo");
 

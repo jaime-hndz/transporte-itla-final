@@ -17,6 +17,8 @@ CREATE TABLE usuarios(
 id_usuario INT IDENTITY PRIMARY KEY,
 nombre VARCHAR(255) NOT NULL,
 apellido VARCHAR(255) NOT NULL,
+email VARCHAR(255) NOT NULL,
+contra VARCHAR(255) NOT NULL,
 id_tipo INT NOT NULL,
 CONSTRAINT fk_tipo FOREIGN KEY (id_tipo)
 REFERENCES tipos (id_tipo)
