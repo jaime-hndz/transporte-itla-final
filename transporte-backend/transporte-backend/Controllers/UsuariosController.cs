@@ -99,6 +99,22 @@ namespace transporte_backend.Controllers
             return NoContent();
         }
 
+        [HttpGet("auth")]
+        public ActionResult<Usuario> Auth([FromQuery]String nombre, [FromQuery]String contra)
+        {
+            var usuario =  _context.Usuarios
+                .Where(u => u.Email == nombre)
+                .Where(u => u.Contra == contra)
+                .FirstOrDefault();
+
+            if (usuario == null)
+            {
+                return NotFound();
+            }
+
+            return usuario;
+        }
+
         private bool UsuarioExists(int id)
         {
             return _context.Usuarios.Any(e => e.IdUsuario == id);

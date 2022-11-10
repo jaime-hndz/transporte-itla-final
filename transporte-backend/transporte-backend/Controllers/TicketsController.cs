@@ -99,6 +99,13 @@ namespace transporte_backend.Controllers
             return NoContent();
         }
 
+        [HttpGet("check")]
+        public ActionResult<bool> CheckTicket([FromQuery] int idViaje,[FromQuery] string idEstudiante)
+        {
+            return _context.Tickets.Any(e => e.IdViaje == idViaje && e.IdEstudiante == idEstudiante && e.IdEstadoTicket == 2);
+        }
+
+
         private bool TicketExists(int id)
         {
             return _context.Tickets.Any(e => e.IdTicket == id);

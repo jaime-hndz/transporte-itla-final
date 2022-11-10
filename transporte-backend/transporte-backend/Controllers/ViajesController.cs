@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
@@ -81,6 +82,22 @@ namespace transporte_backend.Controllers
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetViaje", new { id = viaje.IdViaje }, viaje);
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<Viaje>> PostViaje(Viaje[] viajes)
+        {
+            try
+            {
+                _context.Viajes.AddRange(viajes);
+                await _context.SaveChangesAsync();
+
+            }catch(DbException)
+            {
+                return BadRequest();
+            }
+
+            return Ok();
         }
 
         // DELETE: api/Viajes/5
