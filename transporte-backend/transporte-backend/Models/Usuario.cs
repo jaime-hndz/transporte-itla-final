@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using transporte_backend.Models;
 
 namespace transporte_backend.Models
 {

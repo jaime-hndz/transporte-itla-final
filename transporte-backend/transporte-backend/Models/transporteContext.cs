@@ -16,6 +16,7 @@ namespace transporte_backend.Models
         {
         }
 
+        public virtual DbSet<CantidadCupo> CantidadCupos { get; set; } = null!;
         public virtual DbSet<EstadoTicket> EstadoTickets { get; set; } = null!;
         public virtual DbSet<Estudiante> Estudiantes { get; set; } = null!;
         public virtual DbSet<Horario> Horarios { get; set; } = null!;
@@ -29,13 +30,29 @@ namespace transporte_backend.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Server=.\\MSSQLSERVER01;Database=transporte; Trusted_Connection=true;");
+                optionsBuilder.UseSqlServer("Server=LAPTOP-O4IATO9T\\MSSQLSERVER01;Database=transporte; Trusted_Connection=true;");
             }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<CantidadCupo>(entity =>
+            {
+                entity.HasKey(e => e.IdCantidadCupos)
+                    .HasName("PK__cantidad__1B2062042BC6A021");
+
+                entity.ToTable("cantidad_cupos");
+
+                entity.Property(e => e.IdCantidadCupos).HasColumnName("id_cantidad_cupos");
+
+                entity.Property(e => e.Cantidad).HasColumnName("cantidad");
+
+                entity.Property(e => e.Descripcion)
+                    .HasMaxLength(255)
+                    .IsUnicode(false)
+                    .HasColumnName("descripcion");
+            });
+
             modelBuilder.Entity<EstadoTicket>(entity =>
             {
                 entity.HasKey(e => e.IdEstadoTicket)
@@ -214,9 +231,17 @@ namespace transporte_backend.Models
                     .HasColumnType("date")
                     .HasColumnName("fecha");
 
+                entity.Property(e => e.IdCantidadCupos).HasColumnName("id_cantidad_cupos");
+
                 entity.Property(e => e.IdHorario).HasColumnName("id_horario");
 
                 entity.Property(e => e.IdRuta).HasColumnName("id_ruta");
+
+                entity.HasOne(d => d.IdCantidadCuposNavigation)
+                    .WithMany(p => p.Viajes)
+                    .HasForeignKey(d => d.IdCantidadCupos)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("fk_cantidad_cupos");
 
                 entity.HasOne(d => d.IdHorarioNavigation)
                     .WithMany(p => p.Viajes)
