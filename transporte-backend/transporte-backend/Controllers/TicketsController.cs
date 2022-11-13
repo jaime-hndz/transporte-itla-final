@@ -77,10 +77,18 @@ namespace transporte_backend.Controllers
         [HttpPost]
         public async Task<ActionResult<Ticket>> PostTicket(Ticket ticket)
         {
-            _context.Tickets.Add(ticket);
-            await _context.SaveChangesAsync();
+            if (ticket.IdViajeNavigation.Tickets.Count() < ticket.IdViajeNavigation.IdCantidadCuposNavigation.Cantidad)
+            {
+                _context.Tickets.Add(ticket);
+                await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetTicket", new { id = ticket.IdTicket }, ticket);
+                return CreatedAtAction("GetTicket", new { id = ticket.IdTicket }, ticket);
+            }
+            else
+            {
+                return BadRequest();
+            }
+            
         }
 
         // DELETE: api/Tickets/5
