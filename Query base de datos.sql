@@ -85,6 +85,13 @@ INSERT INTO horarios (descripcion) VALUES ('10:00 PM')
 SELECT *
 FROM horarios
 
+CREATE TABLE cantidad_cupos(
+id_cantidad_cupos INT IDENTITY PRIMARY KEY,
+descripcion VARCHAR(255) NOT NULL,
+cantidad INT NOT NULL
+);
+
+INSERT INTO cantidad_cupos (descripcion,cantidad) VALUES ('estándar',60)
 
 CREATE TABLE viajes(
 id_viaje INT IDENTITY PRIMARY KEY,
@@ -96,6 +103,15 @@ REFERENCES horarios (id_horario),
 CONSTRAINT fk_ruta FOREIGN KEY (id_ruta)
 REFERENCES rutas (id_ruta)
 );
+
+ALTER TABLE viajes
+ADD id_cantidad_cupos INT NOT NULL;
+
+ALTER TABLE viajes 
+ADD CONSTRAINT fk_cantidad_cupos FOREIGN KEY (id_cantidad_cupos) 
+REFERENCES cantidad_cupos(id_cantidad_cupos);
+
+
 
 SELECT *
 FROM viajes

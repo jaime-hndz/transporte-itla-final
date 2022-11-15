@@ -3,6 +3,9 @@ import LogoutIcon from '@mui/icons-material/Logout'
 
 export const LogOut = ({usuario}) => {
   return (
-    <div>{usuario} <LogoutIcon /> </div>
+    <div style={{display:'flex'}}>
+      <div>{usuario}</div> 
+      <div><LogoutIcon /></div>
+    </div>
   )
 }

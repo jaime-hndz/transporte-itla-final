@@ -13,14 +13,14 @@ var usuario = {
 export const Header = () => {
 
   return (
-    <div style={{display: 'flex', backgroundColor: 'white'}}>;
-        <div>
-          <img src={logo} alt='logo'/>
+    <div className='header'>;
+        <div className='logo-container'>
+          <img src={logo} alt='logo' className='logo' />
         </div>
         <Navbar options={usuario.tipo === "student" ? StudentOptions : AdminOptions} />
-        <div style={{marginRight: '0px', marginLeft: 'auto'}} >
-          <p>Balance RD$ {usuario.saldo}</p>
+        <div className='logout-container'>
           <LogOut usuario={usuario.nombre} />
+          <div style={{color: 'red'}}>Balance RD$ {usuario.saldo}</div>
         </div>
 
     </div>
