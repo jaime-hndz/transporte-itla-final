@@ -15,7 +15,7 @@ const PrivateRoutes = () => {
       <Container>
         <Paper
           elevation={2}
-          style={{ padding: "40px", margin: "40px" }}
+          style={{ padding: "40px", margin: "40px", marginBottom: "160px" }}
         >
           <Routes>
             <Route path="/" element={<HomeScreen />} />
