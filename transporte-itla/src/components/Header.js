@@ -1,5 +1,5 @@
 import React from 'react'
-import {StudentOptions, AdminOptions } from '../data/NavbarOptions.js'
+import {StudentOptions, AdminOptions } from '../data/NavbarOptionsData.js'
 import { Navbar } from './Navbar.js'
 import logo from "../resources/itla-transporte.svg";
 import { LogOut } from './LogOut.js';
