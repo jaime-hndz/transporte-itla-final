@@ -7,8 +7,19 @@ import { Container } from "@mui/system";
 import RequestsScreen from "../pages/RequestsScreen";
 import { PaymentMethodsScreen } from "../pages/PaymentMethodsScreen";
 import { ScheduleScreen } from "../pages/ScheduleScreen";
+import { useEffect } from "react";
+import Cookies from 'universal-cookie';
+
+const cookies = new Cookies();
 
 const PrivateRoutes = () => {
+
+  useEffect(() => {
+    if (!cookies.get('usuario')) {
+      window.location.href="./login"
+    }
+  }, [])
+
   return (
     <>
       <Header />

@@ -84,8 +84,8 @@ namespace transporte_backend.Controllers
             return CreatedAtAction("GetViaje", new { id = viaje.IdViaje }, viaje);
         }
 
-        [HttpPost]
-        public async Task<ActionResult<Viaje>> PostViaje(Viaje[] viajes)
+        [HttpPost("postviajes")]
+        public async Task<ActionResult<Viaje>> PostViajes(Viaje[] viajes)
         {
             try
             {

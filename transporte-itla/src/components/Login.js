@@ -1,13 +1,25 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {Input, Button} from '@mui/material'
+import { BaseUrl } from '../helpers/BaseUrl';
+import axios from 'axios';
+import md5 from 'md5';
+import Cookies from 'universal-cookie';
+
+const cookies = new Cookies();
 
 export const Login = () => {
-
-  
+ 
   const [formValues, setformValues] = useState({
     user: '',
     pass: ''
   })
+
+  useEffect(() => {
+    if (cookies.get('usuario')) {
+      window.location.href="./"
+    }
+  }, [])
+  
 
   const handleChange = async (e) =>{
     await setformValues({
@@ -17,20 +29,28 @@ export const Login = () => {
     })
   }
 
-  const handleLogin = (e) =>{
+  const handleLogin = async (e) =>{
 
-    /*
-    
-      AQUí VA LA LóGICA DEL LOGIN
-    
-    
-    */
     e.preventDefault()
-    if(formValues.user === 'jaime' && formValues.pass === '1'){
-      window.location.href="./"
-    }else{
-      alert("El usuario o la contraseña no son correctas")
-    }
+    await axios
+      .get(BaseUrl + "usuarios/auth", {
+        params: {
+          nombre: formValues.user,
+          contra: md5(formValues.pass),
+        },
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          "Content-Type": "application/json",
+        },
+      })
+      .then(response => {
+        cookies.set('usuario', response.data, {path: '/'})
+        alert(`Bienvenido/a ${response.data.email}`)
+        window.location.href="./"
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }
 
 
@@ -41,25 +61,25 @@ export const Login = () => {
       autoComplete='false'
       onSubmit={handleLogin}
     >
-      <label for="posicion">Usuario</label>
-      <div class="form-group input-group">
-        <span class="input-group-addon">
+      <label htmlFor="posicion">Usuario</label>
+      <div className="form-group input-group">
+        <span className="input-group-addon">
         </span>
         <Input
           type="text"
           name="user"
-          class="form-control"
+          className="form-control"
           placeholder="Usuario"
           onChange={handleChange}
         />
       </div>
-      <label for="pass">Contraseña</label>
+      <label htmlFor="pass">Contraseña</label>
       <div>
         <Input
           type="password"
           name="pass"
           id="pass"
-          class="form-control"
+          className="form-control"
           placeholder="Contraseña"
           onChange={handleChange}
 
