@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import { HomeScreen } from "../pages/HomeScreen";
+import { StudentHomeScreen } from "../pages/StudentHomeScreen";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 import { Paper } from "@mui/material";
@@ -9,13 +9,16 @@ import { PaymentMethodsScreen } from "../pages/PaymentMethodsScreen";
 import { ScheduleScreen } from "../pages/ScheduleScreen";
 import { useEffect } from "react";
 import Cookies from 'universal-cookie';
+import { AdminHomeScreen } from "../pages/AdminHomeScreen";
+import { AdminTravelsScreen } from "../pages/AdminTravelsScreen";
 
 const cookies = new Cookies();
+var usuario = cookies.get('usuario')
 
 const PrivateRoutes = () => {
 
   useEffect(() => {
-    if (!cookies.get('usuario')) {
+    if (!usuario) {
       window.location.href="./login"
     }
   }, [])
@@ -29,10 +32,11 @@ const PrivateRoutes = () => {
           style={{ padding: "40px", margin: "40px", marginBottom: "160px" }}
         >
           <Routes>
-            <Route path="/" element={<HomeScreen />} />
+            <Route path="/" element={usuario.idTipo === 1 ? <StudentHomeScreen /> : <AdminHomeScreen />} />
             <Route path="/solicitudes" element={<RequestsScreen />} />
             <Route path="/formas" element={<PaymentMethodsScreen />} />
             <Route path="/horarios" element={<ScheduleScreen />} />
+            <Route path="/administrar" element={<AdminTravelsScreen />} />
           </Routes>
         </Paper>
       </Container>
