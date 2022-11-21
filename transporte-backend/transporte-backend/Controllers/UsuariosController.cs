@@ -106,6 +106,7 @@ namespace transporte_backend.Controllers
                 .Where(u => u.Email == nombre)
                 .Where(u => u.Contra == contra)
                 .Include(u => u.IdTipoNavigation)
+                .Include(u => u.Estudiantes)
                 .FirstOrDefault();
 
             if (usuario == null)

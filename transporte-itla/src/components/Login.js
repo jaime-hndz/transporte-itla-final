@@ -1,9 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import {Input, Button} from '@mui/material'
-import { BaseUrl } from '../helpers/BaseUrl';
-import axios from 'axios';
 import md5 from 'md5';
 import Cookies from 'universal-cookie';
+import {fetchApi} from '../helpers/fetchApi'
 
 const cookies = new Cookies();
 
@@ -13,13 +12,6 @@ export const Login = () => {
     user: '',
     pass: ''
   })
-
-  useEffect(() => {
-    if (cookies.get('usuario')) {
-      window.location.href="./"
-    }
-  }, [])
-  
 
   const handleChange = async (e) =>{
     await setformValues({
@@ -32,16 +24,9 @@ export const Login = () => {
   const handleLogin = async (e) =>{
 
     e.preventDefault()
-    await axios
-      .get(BaseUrl + "usuarios/auth", {
-        params: {
-          nombre: formValues.user,
-          contra: md5(formValues.pass),
-        },
-        headers: {
-          "Access-Control-Allow-Origin": "*",
-          "Content-Type": "application/json",
-        },
+      await fetchApi("usuarios/auth", {
+        nombre: formValues.user,
+        contra: md5(formValues.pass),
       })
       .then(response => {
         cookies.set('usuario', response.data, {path: '/'})

@@ -1,10 +1,22 @@
 import { Paper } from "@mui/material";
+import { useEffect } from 'react';
 import { Container } from "@mui/system";
 import React from "react";
 import { Login } from "../components/Login";
 import logo from "../resources/itla-transporte.svg";
 import '../styles/login.css'
+import Cookies from 'universal-cookie';
+
+const cookies = new Cookies();
+
 export const LoginScreen = () => {
+
+  useEffect(() => {
+	if (cookies.get('usuario')) {
+		window.location.href="./"
+	}
+  }, [])
+  
   return (
     <Container maxWidth="sm">
 	  <Paper elevation={2} style={{padding: '40px'}}>

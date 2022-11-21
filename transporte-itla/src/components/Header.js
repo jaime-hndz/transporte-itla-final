@@ -26,7 +26,7 @@ export const Header = () => {
         <Navbar options={usuario.idTipo === 1 ? StudentOptions : AdminOptions} />
         <div className='logout-container'>
           <LogOut usuario={usuario.nombre+" "+usuario.apellido} />
-          {usuario.salgo ? <Balance saldo={usuario.saldo} /> : <div style={{color: 'blue'}}>Administrador/a</div>}
+          {usuario.estudiantes[0] ? <Balance saldo={usuario.estudiantes[0].saldo} /> : <div style={{color: 'blue'}}>Administrador/a</div>}
         </div>
 
     </div>
