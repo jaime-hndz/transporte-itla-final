@@ -8,7 +8,7 @@ namespace transporte_backend.Models
         public int IdTicket { get; set; }
         public string? IdEstudiante { get; set; }
         public int IdViaje { get; set; }
-        public int IdEstadoTicket { get; set; }
+        public int IdEstadoTicket { get; set; } = 1;
 
         public virtual EstadoTicket IdEstadoTicketNavigation { get; set; } = null!;
         public virtual Estudiante? IdEstudianteNavigation { get; set; }

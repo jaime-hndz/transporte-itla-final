@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
@@ -89,6 +90,35 @@ namespace transporte_backend.Controllers
                 return BadRequest();
             }
             
+        }
+
+        [HttpPost("posttickets/")]
+        public async Task<ActionResult<Ticket>> PostTickets([FromQuery] int[] viajes, [FromQuery]string id)
+        {
+            List<Ticket> tickets = new List<Ticket>();
+            foreach (var item in viajes)
+            {
+                Ticket ticket = new Ticket
+                {
+                    IdTicket = 0,
+                    IdEstudiante = id,
+                    IdViaje = item,
+                    IdEstadoTicket = 1,
+                };
+                tickets.Add(ticket);
+            }
+
+            try
+            {
+                _context.Tickets.AddRange(tickets);
+                await _context.SaveChangesAsync();
+
+            }catch (DbException)
+            {
+                return BadRequest("Hola");
+            }
+            return Ok();
+
         }
 
         // DELETE: api/Tickets/5
