@@ -1,7 +1,7 @@
 import { Button, Input } from '@mui/material'
 import React, { useState } from 'react'
 import {fetchApi} from '../helpers/fetchApi'
-import { TravelsTable } from './TravelsTable'
+import { TravelsTable } from './Tables/TravelsTable'
 
 export const ViewTravels = () => {
 

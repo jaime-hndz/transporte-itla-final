@@ -1,6 +1,6 @@
 import React from 'react'
-import { ScheduleTable } from '../components/ScheduleTable'
-import { SaturdaySchedule, WeekSchedule } from '../data/ScheduleData'
+import { ScheduleTable } from '../../components/Tables/ScheduleTable/ScheduleTable'
+import { SaturdaySchedule, WeekSchedule } from '../../data/ScheduleData'
 
 export const ScheduleScreen = () => {
   return (

@@ -1,5 +1,5 @@
 import React from 'react'
-import { TicketsTable } from '../components/TicketsTable'
+import { TicketsTable } from '../../components/Tables/TicketsTable'
 
 export const RequestsScreen = () => {
   return (

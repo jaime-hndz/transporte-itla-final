@@ -1,6 +1,6 @@
 import { useEffect,useState } from "react";
 import { DataGrid } from '@mui/x-data-grid';
-import { fetchApi } from "../helpers/fetchApi.js"
+import { fetchApi } from "../../helpers/fetchApi.js"
 import  Cookies  from "universal-cookie";
 
 const cookies = new Cookies();

@@ -1,5 +1,5 @@
 import React from 'react'
-import { ViewTravels } from '../components/ViewTravels'
+import { ViewTravels } from '../../components/ViewTravels'
 
 export const StudentHomeScreen = () => {
   return (
