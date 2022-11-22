@@ -4,7 +4,7 @@ import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 import { Paper } from "@mui/material";
 import { Container } from "@mui/system";
-import RequestsScreen from "../pages/RequestsScreen";
+import {RequestsScreen} from "../pages/RequestsScreen";
 import { PaymentMethodsScreen } from "../pages/PaymentMethodsScreen";
 import { ScheduleScreen } from "../pages/ScheduleScreen";
 import { useEffect } from "react";

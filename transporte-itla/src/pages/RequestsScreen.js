@@ -1,11 +1,12 @@
 import React from 'react'
+import { TicketsTable } from '../components/TicketsTable'
 
-const RequestsScreen = () => {
+export const RequestsScreen = () => {
   return (
     <>
-      <h1>RequestsScreen</h1>
+      <h1>Solicitudes de tickets por pagar</h1>
+      <TicketsTable />
     </>
   )
 }
 
-export default RequestsScreen

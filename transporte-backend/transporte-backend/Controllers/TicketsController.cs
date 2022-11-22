@@ -28,6 +28,27 @@ namespace transporte_backend.Controllers
             return await _context.Tickets.ToListAsync();
         }
 
+        // GET: api/Tickets
+        [HttpGet("ticketsPorPagar")]
+        public async Task<ActionResult<IEnumerable<Ticket>>> TicketsPorPagar([FromQuery] string id)
+        {
+            return await _context.Tickets
+                .Where(u => u.IdEstudiante == id)
+                .Where(u => u.IdEstadoTicket == 1)
+                .Include(u => u.IdViajeNavigation)
+                .Include(u => u.IdEstadoTicketNavigation)
+                .ToListAsync();
+        }
+
+        [HttpGet("ticketsPagos")]
+        public async Task<ActionResult<IEnumerable<Ticket>>> TicketsPagos([FromQuery] string id)
+        {
+            return await _context.Tickets
+                .Where(u => u.IdEstudiante == id)
+                .Where(u => u.IdEstadoTicket == 2)
+                .ToListAsync();
+        }
+
         // GET: api/Tickets/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Ticket>> GetTicket(int id)
