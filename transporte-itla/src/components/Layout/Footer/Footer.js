@@ -1,6 +1,6 @@
 import React from "react";
-import escudo from "../resources/escudo.webp";
-import logo from "../resources/itla-logo-2020.webp";
+import escudo from "../../../resources/escudo.webp";
+import logo from "../../../resources/itla-logo-2020.webp";
 
 export const Footer = () => {
   return (

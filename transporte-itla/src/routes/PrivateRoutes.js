@@ -1,16 +1,16 @@
 import { Route, Routes } from "react-router-dom";
-import { StudentHomeScreen } from "../pages/StudentHomeScreen";
-import { Footer } from "../components/Footer";
-import { Header } from "../components/Header";
+import { StudentHomeScreen } from "../pages/StudentScreens/StudentHomeScreen";
+import { Footer } from "../components/Layout/Footer/Footer";
+import { Header } from "../components/Layout/Header/Header";
 import { Paper } from "@mui/material";
 import { Container } from "@mui/system";
-import {RequestsScreen} from "../pages/RequestsScreen";
-import { PaymentMethodsScreen } from "../pages/PaymentMethodsScreen";
-import { ScheduleScreen } from "../pages/ScheduleScreen";
+import {RequestsScreen} from "../pages/StudentScreens/RequestsScreen";
+import { PaymentMethodsScreen } from "../pages/InformationScreens/PaymentMethodsScreen";
+import { ScheduleScreen } from "../pages/InformationScreens/ScheduleScreen";
 import { useEffect } from "react";
 import Cookies from 'universal-cookie';
-import { AdminHomeScreen } from "../pages/AdminHomeScreen";
-import { AdminTravelsScreen } from "../pages/AdminTravelsScreen";
+import { AdminHomeScreen } from "../pages/AdminScreens/AdminHomeScreen";
+import { AdminTravelsScreen } from "../pages/AdminScreens/AdminTravelsScreen";
 
 const cookies = new Cookies();
 var usuario = cookies.get('usuario')

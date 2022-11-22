@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import {StudentOptions, AdminOptions } from '../../../data/NavbarOptionsData.js'
 import { Navbar } from './Navbar.js'
-import logo from "../resources/itla-transporte.svg";
+import logo from "../../../resources/itla-transporte.svg";
 import { LogOut } from './LogOut.js';
 import Cookies from 'universal-cookie';
 import { Balance } from './Balance.js';
