@@ -17,12 +17,12 @@ export const DataTable = ({rows, columns, footer,rowId, seleccion, setSeleccion}
       columns={columns}
       pageSize={10}
       rowsPerPageOptions={[5]}
-      checkboxSelection
-      onSelectionModelChange={(newSelectionModel) => {
-        setSeleccion(newSelectionModel);
-      }}
       components={{
         Footer: () => footer
+      }}
+      checkboxSelection={footer ? true : false}
+      onSelectionModelChange={(newSelectionModel) => {
+        setSeleccion(newSelectionModel);
       }}
       selectionModel={seleccion}
     />

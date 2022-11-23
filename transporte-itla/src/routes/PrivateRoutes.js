@@ -11,6 +11,7 @@ import { useEffect } from "react";
 import Cookies from 'universal-cookie';
 import { AdminHomeScreen } from "../pages/AdminScreens/AdminHomeScreen";
 import { AdminTravelsScreen } from "../pages/AdminScreens/AdminTravelsScreen";
+import { PaidTicketsScreen } from "../pages/StudentScreens/PaidTicketsScreen";
 
 const cookies = new Cookies();
 var usuario = cookies.get('usuario')
@@ -34,6 +35,7 @@ const PrivateRoutes = () => {
           <Routes>
             <Route path="/" element={usuario.idTipo === 1 ? <StudentHomeScreen /> : <AdminHomeScreen />} />
             <Route path="/solicitudes" element={<RequestsScreen />} />
+            <Route path="/tickets" element={<PaidTicketsScreen />} />
             <Route path="/formas" element={<PaymentMethodsScreen />} />
             <Route path="/horarios" element={<ScheduleScreen />} />
             <Route path="/administrar" element={<AdminTravelsScreen />} />

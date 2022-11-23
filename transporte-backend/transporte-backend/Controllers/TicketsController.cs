@@ -47,6 +47,9 @@ namespace transporte_backend.Controllers
             return await _context.Tickets
                 .Where(u => u.IdEstudiante == id)
                 .Where(u => u.IdEstadoTicket == 2)
+                .Include(u => u.IdViajeNavigation.IdHorarioNavigation)
+                .Include(u => u.IdViajeNavigation.IdRutaNavigation)
+                .Include(u => u.IdEstadoTicketNavigation)
                 .ToListAsync();
         }
 

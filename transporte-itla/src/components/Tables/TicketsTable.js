@@ -47,13 +47,14 @@ const columns = [
   },
 ];
 
-export const TicketsTable = () => {
+export const TicketsTable = ({pagos=false}) => {
 
   const [selectionModel, setSelectionModel] = useState([]);
   const [tickets, setTickets] = useState([]);
+  var estado = pagos ? "pagos" : "porpagar"
 
   const getfromapi = async () => {
-    await fetchApi("tickets/ticketsporpagar", {
+    await fetchApi("tickets/tickets"+estado, {
       id: `${usuario.estudiantes[0].idEstudiante}`,
     })
     .then((response) => {
@@ -73,7 +74,7 @@ export const TicketsTable = () => {
     <DataTable
       rows={tickets}
       columns={columns}
-      footer={<Button variant="contained">Solicitar viajes</Button>}
+      footer={pagos ? null : <Button variant="contained">Solicitar viajes</Button>}
       rowId="idTicket"
       seleccion={selectionModel}
       setSeleccion={setSelectionModel}
