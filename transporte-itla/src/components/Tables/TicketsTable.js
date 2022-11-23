@@ -8,6 +8,34 @@ const cookies = new Cookies();
 var usuario = cookies.get("usuario");
 
 const columns = [
+    {
+    field: 'Ruta',
+    headerName: 'Ruta',
+    description: 'Es la ruta del viaje',
+    sortable: false,
+    width: 300,
+    valueGetter: (params) => {
+      return `${params.row.idViajeNavigation.idRutaNavigation.descripcion}`
+    }
+  },
+  {
+      field: 'precio',
+      headerName: 'Precio',
+      description: 'El precio del viaje',
+      sortable: false,
+      valueGetter: (params) => {
+        return `${params.row.idViajeNavigation.idRutaNavigation.precio} RD $`
+      }
+    },
+    {
+      field: 'horario',
+      headerName: 'Horario',
+      description: 'Es horario del viaje',
+      sortable: false,
+      valueGetter: (params) => {
+        return `${params.row.idViajeNavigation.idHorarioNavigation.descripcion}`
+      }
+    },
   {
     field: "estado",
     headerName: "Estado",
