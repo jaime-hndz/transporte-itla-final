@@ -1,30 +1,30 @@
-import { useEffect,useState } from "react";
 import { DataGrid } from '@mui/x-data-grid';
-import { fetchApi } from "../../helpers/fetchApi.js"
-import  Cookies  from "universal-cookie";
+import { useEffect } from 'react';
 
-const cookies = new Cookies();
-var usuario = cookies.get('usuario')
 
-export const DataTable = ({rows, columns, footer,options}) => {
+export const DataTable = ({rows, columns, footer,rowId, seleccion, setSeleccion}) => {
 
-  const [selectionModel, setSelectionModel] = useState([]);
+  useEffect(() => {
+    console.log(seleccion)
+  }, [seleccion])
+  
+
   return (
     <div style={{ height: 400, width: '100%' }}>
     <DataGrid
       rows={rows}
+      getRowId={(row) => row[rowId]}
       columns={columns}
       pageSize={10}
       rowsPerPageOptions={[5]}
       checkboxSelection
       onSelectionModelChange={(newSelectionModel) => {
-        setSelectionModel(newSelectionModel);
+        setSeleccion(newSelectionModel);
       }}
       components={{
         Footer: () => footer
       }}
-      selectionModel={selectionModel}
-      {... options}
+      selectionModel={seleccion}
     />
   </div>
   )

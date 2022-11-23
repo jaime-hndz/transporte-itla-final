@@ -113,7 +113,7 @@ namespace transporte_backend.Controllers
             
         }
 
-        [HttpPost("posttickets/")]
+        [HttpPost("posttickets")]
         public async Task<ActionResult<Ticket>> PostTickets([FromQuery] int[] viajes, [FromQuery]string id)
         {
             List<Ticket> tickets = new List<Ticket>();
@@ -136,7 +136,7 @@ namespace transporte_backend.Controllers
 
             }catch (DbException)
             {
-                return BadRequest("Hola");
+                return BadRequest();
             }
             return Ok();
 

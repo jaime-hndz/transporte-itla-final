@@ -1,8 +1,8 @@
-import { useEffect,useState } from "react";
-import { DataGrid } from '@mui/x-data-grid';
-import { Button } from "@mui/material";
+import { useState } from "react";
+import { Button, Input } from "@mui/material";
 import { fetchApi } from "../../helpers/fetchApi.js"
 import  Cookies  from "universal-cookie";
+import { DataTable } from "./DataTable.js";
 
 const cookies = new Cookies();
 var usuario = cookies.get('usuario')
@@ -39,11 +39,14 @@ const columns = [
   ];
 
   
-export const TravelsTable = ({viajes}) => {
+export const TravelsTable = () => {
 
     const [selectionModel, setSelectionModel] = useState([]);
-    useEffect(() => {
-    }, [viajes,selectionModel])
+    const [viajes, setViajes] =  useState([])
+    const [formValues, setformValues] = useState({
+      fecha: null
+    })
+
 
     const SolicitarViajes = async () =>{
         await fetchApi(`tickets/posttickets`, {
@@ -57,23 +60,47 @@ export const TravelsTable = ({viajes}) => {
         console.log(error);
         });
     }
+
+    const handleChange = async (e) =>{
+      await setformValues({
+        ...formValues,
+        [e.target.name] : e.target.value
+          
+      })
+    }
+  
+    const handleSubmit = async (e) =>{
+  
+      console.log(formValues)
+      e.preventDefault()
+      await fetchApi("viajes/bydate", formValues)
+      .then(response => {
+        setViajes(response.data)
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    }
+
   return (
-    <div style={{ height: 400, width: '100%' }}>
-      <DataGrid
+    <>
+      <h2>Viajes disponibles</h2>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <Input type="date" onChange={handleChange} required name='fecha'/>
+        </div>
+        <div>
+          <Button variant="contained" type="submit">Ver viajes disponibles</Button>
+        </div>
+      </form>
+      <DataTable
         rows={viajes}
-        getRowId={(row) => row.idViaje}
         columns={columns}
-        pageSize={10}
-        rowsPerPageOptions={[5]}
-        checkboxSelection
-        onSelectionModelChange={(newSelectionModel) => {
-            setSelectionModel(newSelectionModel);
-        }}
-        components={{
-            Footer: () => <Button variant='contained' onClick={SolicitarViajes}>Solicitar viajes</Button>
-        }}
-        selectionModel={selectionModel}
+        footer={<Button variant='contained' onClick={SolicitarViajes}>Solicitar viajes</Button>}
+        rowId='idViaje'
+        seleccion={selectionModel}
+        setSeleccion={setSelectionModel}
       />
-    </div>
+    </>
   )
 }
