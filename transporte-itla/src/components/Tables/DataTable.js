@@ -2,10 +2,10 @@ import { DataGrid } from '@mui/x-data-grid';
 import { useEffect } from 'react';
 
 
-export const DataTable = ({rows, columns, footer,rowId, seleccion, setSeleccion}) => {
+export const DataTable = ({rows, columns, footer,rowId, seleccion, onSeleccion}) => {
 
   useEffect(() => {
-    console.log(seleccion)
+    // console.log(seleccion)
   }, [seleccion])
   
 
@@ -17,13 +17,12 @@ export const DataTable = ({rows, columns, footer,rowId, seleccion, setSeleccion}
       columns={columns}
       pageSize={10}
       rowsPerPageOptions={[5]}
+      disableSelectionOnClick
       components={{
         Footer: () => footer
       }}
       checkboxSelection={footer ? true : false}
-      onSelectionModelChange={(newSelectionModel) => {
-        setSeleccion(newSelectionModel);
-      }}
+      onSelectionModelChange={onSeleccion}
       selectionModel={seleccion}
     />
   </div>

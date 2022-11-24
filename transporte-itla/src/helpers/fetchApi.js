@@ -3,25 +3,36 @@ import axios from 'axios';
 
 export const fetchApi = (endpoint, data, method ='GET') =>{
     var url = `${BaseUrl}${endpoint}`;
+    switch (method) {
+      case 'POST':
+        return axios.post(url, null,{
+          params: data,
+          headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Content-Type": "application/json",
+          },
+        })
+      case 'PUT':
 
-    console.log(url)
-    console.log(data)
-    if(method==='POST'){
-      return axios.post(url, null,{
-        params: data,
-        headers: {
-          "Access-Control-Allow-Origin": "*",
-          "Content-Type": "application/json",
-        },
-      })
-    }else{
-      return axios.get(url, {
-        params: data,
-        headers: {
-          "Access-Control-Allow-Origin": "*",
-          "Content-Type": "application/json",
-        },
-      })
-    }
+        console.clear()
+        console.log(url)
+        console.log(JSON.stringify(data))
+
+        return axios.put(url, data,{
+          // params: data,
+          headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Content-Type": "application/json",
+          },
+        })
+      default:
+        return axios.get(url, {
+          params: data,
+          headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Content-Type": "application/json",
+          },
+        })
+    }    
 
 }

@@ -98,6 +98,32 @@ namespace transporte_backend.Controllers
             return NoContent();
         }
 
+        [HttpPut("pagartickets/{id}/{total}")]
+        public async Task<IActionResult> PagarTickets([FromBody] IEnumerable<Ticket> tickets, string id, int total)
+        {
+
+            _context.Tickets.UpdateRange(tickets);
+            var estudiante = _context.Estudiantes.Where(u => u.IdEstudiante == id).FirstOrDefault();
+            
+            if (estudiante == null)
+            {
+                return NotFound();
+            }
+
+            estudiante.Saldo = estudiante.Saldo - total;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                throw;
+            }
+
+            return Ok(estudiante.Saldo);
+        }
+
         // POST: api/Tickets
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
