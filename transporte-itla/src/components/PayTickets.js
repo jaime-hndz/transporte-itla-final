@@ -2,16 +2,20 @@ import React from "react";
 import { Button } from "@mui/material";
 import { fetchApi } from "../helpers/fetchApi";
 import Cookies from "universal-cookie";
+import { useNavigate } from "react-router-dom";
 
 const cookies = new Cookies();
 var usuario = cookies.get("usuario");
 
 export const PayTickets = ({ total, tickets, estudiante }) => {
 
+  let nav = useNavigate()
   const Pagar = async () =>{
-    // if(estudiante.saldo < total){
-    //     alert('No bro, no tienes plata')
-    // }else{
+    if(estudiante.saldo < total){
+      if (window.confirm('No bro, no tienes plata. ¿Quieres ir a recargar tu saldo?')) {
+        nav('/saldo')
+      }
+    }else{
         tickets.forEach(element => {
             element.idEstadoTicketNavigation = null
             element.idViajeNavigation = null
@@ -28,7 +32,7 @@ export const PayTickets = ({ total, tickets, estudiante }) => {
         .catch((error) => {
         console.log(error);
         })
-    // }
+    }
 
   }
   return (

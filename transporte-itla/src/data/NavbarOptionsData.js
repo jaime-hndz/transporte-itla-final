@@ -2,7 +2,8 @@ import HomeIcon from '@mui/icons-material/Home';
 import ConfirmationNumberIcon from '@mui/icons-material/ConfirmationNumber';
 import LocalActivityIcon from '@mui/icons-material/LocalActivity';
 import PointOfSaleIcon from '@mui/icons-material/PointOfSale';
-import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
+import PaidIcon from '@mui/icons-material/Paid';
 import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
 
 export const StudentOptions = [
@@ -29,7 +30,12 @@ export const StudentOptions = [
     {
         text: 'Horarios',
         path: '/horarios',
-        icon: <AccessTimeIcon />
+        icon: <AccessTimeFilledIcon />
+    },
+    {
+        text: 'Saldo',
+        path: '/saldo',
+        icon: <PaidIcon />
     }  
   
 ]
