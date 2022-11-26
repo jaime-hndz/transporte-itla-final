@@ -4,9 +4,31 @@ body{
 
 .image-login {
     margin: 0 auto;
+    /* background-color: #1b75ae; */
+    width: fit-content;
 }
 
 .container-login {
-    max-width: 300px;
-    background-color: 'red';
+    /* background-color: red; */
+}
+
+.box-login {
+    margin-top: 90px;
+    padding: 40px;
+    width: 500px;
+
+}
+.recordar-links{
+    text-align: right;
+    margin-bottom: 20px;
+}
+.detalles-div{
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+    padding: 15px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    width: 80%;
+    margin: 0 auto;
 }

@@ -19,23 +19,32 @@ export const LoginScreen = () => {
   
   return (
     <Container maxWidth="sm">
-	  <Paper elevation={2} style={{padding: '40px'}}>
+	  <Paper elevation={2} className='box-login'>
 		<div className="container-login">
 			<div className="image-login">
 				<img src={logo} alt="logotransporte" />
 			</div>
-			<h4>Inicia sesión con las mismas credenciales de ORBI</h4>
+			<div style={{textAlign: 'center', marginBottom: '40px'}}>
+				<h3>Inicia sesión con las mismas credenciales de ORBI</h3>
+			</div>
 			<Login />
-			<p>
-			<a href="https://orbi.edu.do/orbi/seguridad/usuario/recordarusuario">
-				¿Olvidaste tu usuario?
-			</a>
-			</p>
-			<p>
-			<a href="https://orbi.edu.do/orbi/seguridad/usuario/resetearclave">
-				¿Olvidaste tu contraseña?
-			</a>
-			</p>
+			<div className="login-footer">
+				<div className="recordar-links">
+					<a href="https://orbi.edu.do/orbi/seguridad/usuario/recordarusuario">
+						¿Olvidaste tu usuario?
+					</a>
+					<br />
+					<a href="https://orbi.edu.do/orbi/seguridad/usuario/resetearclave">
+						¿Olvidaste tu contraseña?
+					</a>
+				</div>
+				<div className="detalles-div">
+					<div>Información del transporte: </div>
+					<div>
+						<a href="https://itla.edu.do/transporte">ver detalles</a>
+					</div>
+				</div>
+			</div>
 		</div>
 	  </Paper>
     </Container>

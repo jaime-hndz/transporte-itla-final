@@ -1,8 +1,11 @@
 import { useState } from 'react';
-import {Input, Button} from '@mui/material'
+import {Button} from '@mui/material'
 import md5 from 'md5';
 import Cookies from 'universal-cookie';
 import {fetchApi} from '../helpers/fetchApi'
+import AccountCircle from '@mui/icons-material/AccountCircle';
+import { Lock } from '@mui/icons-material';
+import { InputCustom } from './InputCustom';
 
 const cookies = new Cookies();
 
@@ -43,38 +46,29 @@ export const Login = () => {
     <form
       method="post"
       id="modified"
-      autoComplete='false'
+      autoComplete="false"
       onSubmit={handleLogin}
     >
-      <label htmlFor="posicion">Usuario</label>
-      <div className="form-group input-group">
-        <span className="input-group-addon">
-        </span>
-        <Input
-          type="text"
-          name="user"
-          className="form-control"
-          placeholder="Usuario"
-          onChange={handleChange}
-        />
-      </div>
-      <label htmlFor="pass">Contraseña</label>
-      <div>
-        <Input
-          type="password"
-          name="pass"
-          id="pass"
-          className="form-control"
-          placeholder="Contraseña"
-          onChange={handleChange}
+      <InputCustom
+        label={"Correo electrónico"}
+        name={"user"}
+        type={"text"}
+        icon={<AccountCircle />}
+        handler={handleChange}
+      />
+      <InputCustom
+        label={"Contraseña"}
+        name={"pass"}
+        type={"password"}
+        icon={<Lock />}
+        handler={handleChange}
+      />
 
-        />
-      </div>
-      <p>
-        <Button type="submit" >
+      <div style={{ marginBottom: "20px", textAlign: "right" }}>
+        <Button type="submit" variant="contained" size="large">
           Entrar
         </Button>
-      </p>
+      </div>
     </form>
   );
 };
