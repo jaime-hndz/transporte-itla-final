@@ -1,12 +1,9 @@
 import { useEffect, useState } from "react";
 import { fetchApi } from "../../helpers/fetchApi.js";
-import Cookies from "universal-cookie";
 import { DataTable } from "./DataTable.js";
 import { DeleteTicket } from "../DeleteTicket.js";
 import { PayTickets } from "../PayTickets.js";
-
-const cookies = new Cookies();
-var usuario = cookies.get("usuario");
+import { usuario } from "../../helpers/UserProvider";
 
 const columns = [
     {

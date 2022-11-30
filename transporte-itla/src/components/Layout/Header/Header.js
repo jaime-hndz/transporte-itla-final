@@ -3,12 +3,8 @@ import {StudentOptions, AdminOptions } from '../../../data/NavbarOptionsData.js'
 import { Navbar } from './Navbar.js'
 import logo from "../../../resources/itla-transporte.svg";
 import { LogOut } from './LogOut.js';
-import Cookies from 'universal-cookie';
 import { Balance } from './Balance.js';
-
-const cookies = new Cookies();
-
-var usuario = cookies.get('usuario')
+import { usuario } from '../../../helpers/UserProvider';
 
 export const Header = () => {
 

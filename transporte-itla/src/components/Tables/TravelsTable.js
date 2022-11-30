@@ -1,11 +1,8 @@
 import { useState } from "react";
 import { Button, Input } from "@mui/material";
 import { fetchApi } from "../../helpers/fetchApi.js"
-import  Cookies  from "universal-cookie";
 import { DataTable } from "./DataTable.js";
-
-const cookies = new Cookies();
-var usuario = cookies.get('usuario')
+import { usuario } from "../../helpers/UserProvider";
 
 const columns = [
     {

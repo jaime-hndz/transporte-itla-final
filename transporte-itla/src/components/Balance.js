@@ -1,8 +1,5 @@
 import React from 'react'
-import Cookies from "universal-cookie";
-
-const cookies = new Cookies();
-var usuario = cookies.get("usuario");
+import { usuario } from "../helpers/UserProvider";
 
 export const Balance = () => {
   return (

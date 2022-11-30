@@ -1,11 +1,11 @@
 import React from "react";
 import { Button } from "@mui/material";
 import { fetchApi } from "../helpers/fetchApi";
-import Cookies from "universal-cookie";
 import { useNavigate } from "react-router-dom";
+import Cookies from "universal-cookie";
+import { usuario } from "../helpers/UserProvider";
 
 const cookies = new Cookies();
-var usuario = cookies.get("usuario");
 
 export const PayTickets = ({ total, tickets, estudiante }) => {
 

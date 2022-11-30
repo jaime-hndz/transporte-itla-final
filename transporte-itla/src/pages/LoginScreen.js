@@ -5,14 +5,13 @@ import React from "react";
 import { Login } from "../components/Login";
 import logo from "../resources/itla-transporte.svg";
 import '../styles/login.css'
-import Cookies from 'universal-cookie';
+import { usuario } from '../helpers/UserProvider';
 
-const cookies = new Cookies();
 
 export const LoginScreen = () => {
 
   useEffect(() => {
-	if (cookies.get('usuario')) {
+	if (usuario) {
 		window.location.href="./"
 	}
   }, [])
