@@ -1,8 +1,11 @@
 .header{
-    background-color: #E6E6E7;
-    display: flex;
-    padding: 10px;
+    background-color: #E6E6E7 !important;
 }
+
+.header button{
+    color: #0E6CB4;
+}
+
 
 .navbar{
     display: flex;

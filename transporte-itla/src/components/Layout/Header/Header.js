@@ -16,7 +16,7 @@ export const  Header = () =>{
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" style={{background: '#E6E6E7'}}>
+      <AppBar position="static" className='header'>
         <Toolbar>
           <Logo />
           <Navbar options={usuario.idTipo === 1 ? StudentOptions : AdminOptions} pages={pages} />

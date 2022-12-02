@@ -7,9 +7,17 @@
     margin: 0 10px
 }
 
+.inputTravelsTable button{
+    background-color: #0E6CB4;
+}
+
 
 .footerButton{
     margin: 10px
+}
+
+.footerButton button{
+    background-color: #0E6CB4;
 }
 .footerLegend{
     margin-bottom: 10px;
