@@ -1,9 +1,9 @@
 import React from "react";
-import { Button } from "@mui/material";
 import { fetchApi } from "../helpers/fetchApi";
 import { useNavigate } from "react-router-dom";
 import Cookies from "universal-cookie";
 import { usuario } from "../helpers/UserProvider";
+import { FooterButton } from "./FooterButton";
 
 const cookies = new Cookies();
 
@@ -37,8 +37,7 @@ export const PayTickets = ({ total, tickets, estudiante }) => {
   }
   return (
     <>
-      <div>Total a pagar: RD$ {total}</div>
-      <Button variant="contained" onClick={Pagar}>Pagar viajes</Button>
+      <FooterButton texto={'Total a pagar: RD$ '+total} onClick={Pagar}>Pagar viajes</FooterButton>
     </>
   );
 };

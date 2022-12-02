@@ -3,6 +3,7 @@ import { Button, Input } from "@mui/material";
 import { fetchApi } from "../../helpers/fetchApi.js"
 import { DataTable } from "./DataTable.js";
 import { usuario } from "../../helpers/UserProvider";
+import { FooterButton } from "../FooterButton.js";
 
 const columns = [
     {
@@ -83,17 +84,20 @@ export const TravelsTable = () => {
     <>
       <h2>Viajes disponibles</h2>
       <form onSubmit={handleSubmit}>
-        <div>
-          <Input type="date" onChange={handleChange} required name='fecha'/>
+        <div className="inputTravelsTable">
+          <div>
+            <Input type="date" onChange={handleChange} required name='fecha'/>
+          </div>
+          <div>
+            <Button variant="contained" type="submit">Ver viajes disponibles</Button>
+          </div>
         </div>
-        <div>
-          <Button variant="contained" type="submit">Ver viajes disponibles</Button>
-        </div>
+
       </form>
       <DataTable
         rows={viajes}
         columns={columns}
-        footer={<Button variant='contained' onClick={SolicitarViajes}>Solicitar viajes</Button>}
+        footer={<FooterButton onClick={SolicitarViajes}>Solicitar viajes</FooterButton>}
         rowId='idViaje'
         seleccion={selectionModel}
         setSeleccion={setSelectionModel}

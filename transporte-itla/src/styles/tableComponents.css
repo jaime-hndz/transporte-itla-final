@@ -1,0 +1,16 @@
+.inputTravelsTable{
+    display: flex;
+    margin: 10px 0
+}
+
+.inputTravelsTable div{
+    margin: 0 10px
+}
+
+
+.footerButton{
+    margin: 10px
+}
+.footerLegend{
+    margin-bottom: 10px;
+}

@@ -23,7 +23,9 @@ body {
     font-family: 'Titillium Web', sans-serif;
 }
 
-
+Button{
+    background-color: #0E6CB4 !important;
+}
 
 a{
     color: #0E6CB4;
