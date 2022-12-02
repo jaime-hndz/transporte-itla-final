@@ -1,36 +1,29 @@
-import React, { useEffect } from 'react'
+import * as React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+// import Typography from '@mui/material/Typography';
+// import Button from '@mui/material/Button';
+import { SideBar } from './SideBar';
 import {StudentOptions, AdminOptions } from '../../../data/NavbarOptionsData.js'
-import { Navbar } from './Navbar.js'
-import logo from "../../../resources/itla-transporte.svg";
-import { LogOut } from './LogOut.js';
-import { Balance } from './Balance.js';
+import { Navbar } from './Navbar';
 import { usuario } from '../../../helpers/UserProvider';
-import { SideBar } from './SideBar.js';
-import { Nav } from './Nav.js';
+import { LogOut } from './LogOut';
+import { Logo } from './Logo';
 
-export const Header = () => {
-
-  useEffect(() => {
-    console.log(usuario)
-  
-  }, [])
-  
+export const  Header = () =>{
+    const pages = ['Products', 'Pricing', 'Blog'];
 
   return (
-    <>
-      <Nav />
-      {/* <div className='header'>
-        <div className='logo-container'>
-          <img src={logo} alt='logo' className='logo' />
-        </div>
-        <Navbar options={usuario.idTipo === 1 ? StudentOptions : AdminOptions} />
-        <div className='logout-container'>
-          <LogOut usuario={usuario.nombre+" "+usuario.apellido} />
-          {usuario.estudiantes[0] ? <Balance saldo={usuario.estudiantes[0].saldo} /> : <div style={{color: 'blue'}}>Administrador/a</div>}
-        </div>
-      </div> */}
-      <SideBar />
-    </>
-
-  )
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static" style={{background: '#E6E6E7'}}>
+        <Toolbar>
+          <Logo />
+          <Navbar options={usuario.idTipo === 1 ? StudentOptions : AdminOptions} pages={pages} />
+          <SideBar />
+          <LogOut />
+        </Toolbar>
+      </AppBar>
+    </Box>
+  );
 }

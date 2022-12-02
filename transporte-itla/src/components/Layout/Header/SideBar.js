@@ -10,6 +10,8 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu'; 
 
 export const SideBar = () => {
   const [state, setState] = React.useState({
@@ -53,7 +55,16 @@ export const SideBar = () => {
   return (
     <div>
         <React.Fragment key={'left'}>
-          {/* <div onClick={toggleDrawer('left', true)}>Abrir</div> */}
+        <IconButton
+            size="large"
+            edge="start"
+            color="inherit"
+            aria-label="menu"
+            onClick={toggleDrawer('left', true)}
+            sx={{ mr: 2 }}
+          >
+            <MenuIcon />
+          </IconButton>
           <Drawer
             anchor={'left'}
             open={state['left']}
