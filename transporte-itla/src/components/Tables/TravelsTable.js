@@ -34,7 +34,7 @@ const columns = [
           return `${params.row.idHorarioNavigation.descripcion}`
         }
       },
-  ];
+];
 
   
 export const TravelsTable = () => {
