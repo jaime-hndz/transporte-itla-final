@@ -1,10 +1,12 @@
 import React from 'react'
 import { Balance } from '../../components/Balance'
+import { PageTitle } from '../../components/PageTitle';
+
 
 export const BalanceScreen = () => {
   return (
     <>
-      <h1>Saldo</h1>
+      <PageTitle>Saldo</PageTitle>
       <Balance />
     </>
   )

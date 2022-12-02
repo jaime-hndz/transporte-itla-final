@@ -1,10 +1,11 @@
 import React from 'react'
 import { TravelsTable } from '../../components/Tables/TravelsTable'
+import { PageTitle } from '../../components/PageTitle';
 
 export const StudentHomeScreen = () => {
   return (
     <>
-      <h1>Inicio estudiante</h1>
+      <PageTitle>Inicio estudiante</PageTitle>
       <TravelsTable />
     </>
   )

@@ -8,14 +8,11 @@ import {RequestsScreen} from "../pages/StudentScreens/RequestsScreen";
 import { PaymentMethodsScreen } from "../pages/InformationScreens/PaymentMethodsScreen";
 import { ScheduleScreen } from "../pages/InformationScreens/ScheduleScreen";
 import { useEffect } from "react";
-import Cookies from 'universal-cookie';
 import { AdminHomeScreen } from "../pages/AdminScreens/AdminHomeScreen";
 import { AdminTravelsScreen } from "../pages/AdminScreens/AdminTravelsScreen";
 import { PaidTicketsScreen } from "../pages/StudentScreens/PaidTicketsScreen";
 import { BalanceScreen } from "../pages/StudentScreens/BalanceScreen";
-
-const cookies = new Cookies();
-var usuario = cookies.get('usuario')
+import { usuario } from "../helpers/UserProvider";
 
 const PrivateRoutes = () => {
 

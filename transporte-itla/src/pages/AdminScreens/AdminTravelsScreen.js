@@ -1,7 +1,8 @@
 import React from 'react'
+import { PageTitle } from '../../components/PageTitle';
 
 export const AdminTravelsScreen = () => {
   return (
-    <h1>AdminTravelsScreen</h1>
+    <PageTitle>AdminTravelsScreen</PageTitle>
   )
 }

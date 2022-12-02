@@ -1,10 +1,11 @@
 import React from 'react'
 import { TicketsTable } from '../../components/Tables/TicketsTable'
+import { PageTitle } from '../../components/PageTitle';
 
 export const PaidTicketsScreen = () => {
   return (
     <>
-        <h1>Tickets pagos</h1>
+        <PageTitle>Tickets pagos</PageTitle>
         <TicketsTable pagos={true} />
     </>
   )

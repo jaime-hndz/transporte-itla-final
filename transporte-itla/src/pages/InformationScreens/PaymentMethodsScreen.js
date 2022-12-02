@@ -1,10 +1,11 @@
 import React from "react";
+import { PageTitle } from '../../components/PageTitle';
 
 export const PaymentMethodsScreen = () => {
   return (
     <div>
       <div>
-        <h1 class="text-primary">Formas de pago</h1>
+        <PageTitle>Formas de pago</PageTitle>
         <h3>Pago en Línea</h3>
         <p>
           Recarga tu balance con tarjeta de crédito a través de Orbi:{" "}

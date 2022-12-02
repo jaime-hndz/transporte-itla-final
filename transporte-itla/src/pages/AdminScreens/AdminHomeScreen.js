@@ -1,7 +1,10 @@
 import React from 'react'
+import { PageTitle } from '../../components/PageTitle';
 
 export const AdminHomeScreen = () => {
   return (
-    <h1>Inicio Administrador</h1>
+    <>
+      <PageTitle> Inicio Administrador</PageTitle>
+    </>
   )
 }
