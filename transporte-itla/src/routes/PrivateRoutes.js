@@ -25,7 +25,7 @@ const PrivateRoutes = () => {
   return (
     <>
       <Header />
-      <Container>
+      <Container style={{ marginTop: "140px"}}>
         <Paper
           elevation={2}
           style={{ padding: "40px", margin: "40px", marginBottom: "160px" }}
