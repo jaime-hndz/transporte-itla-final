@@ -9,8 +9,8 @@ export const Navbar = ({options}) => {
     <>
       <Box sx={{ flexGrow: 1, display: { xs: 'flex' } }}>
         {options.map((opt) => (
-          <Link to={opt.path}>
-            <MenuItem key={opt.text}>
+          <Link key={opt.text} to={opt.path}>
+            <MenuItem >
               <Typography textAlign="center" style={{color: '#0E6CB4', fontWeight: 'bold'}}>{opt.text}</Typography>
             </MenuItem>
           </Link>

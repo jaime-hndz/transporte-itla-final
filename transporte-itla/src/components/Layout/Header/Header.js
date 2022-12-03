@@ -12,7 +12,7 @@ import { Logo } from './Logo';
 export const  Header = () =>{
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="fixed" className="header">
+      <AppBar position="static" className="header">
         <Toolbar>
           <Logo />
           <Navbar

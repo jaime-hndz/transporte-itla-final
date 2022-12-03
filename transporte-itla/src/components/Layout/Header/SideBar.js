@@ -11,6 +11,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu'; 
 import LogoutIcon from "@mui/icons-material/Logout";
 import { Logo } from './Logo';
+import { Link } from 'react-router-dom';
 
 export const SideBar = ({options}) => {
   const [state, setState] = React.useState({
@@ -40,14 +41,17 @@ export const SideBar = ({options}) => {
       </ListItem>
       <List>
         {options.map((opt, i) => (
-          <ListItem key={i} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {opt.icon}
-              </ListItemIcon>
-              <ListItemText primary={opt.text} />
-            </ListItemButton>
-          </ListItem>
+          <Link key={i} to={opt.path}>
+            <ListItem disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                  {opt.icon}
+                </ListItemIcon>
+                <ListItemText primary={opt.text} />
+              </ListItemButton>
+            </ListItem>
+          </Link>
+
         ))}
       </List>
       <Divider />
