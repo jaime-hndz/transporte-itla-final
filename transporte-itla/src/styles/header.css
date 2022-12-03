@@ -13,6 +13,7 @@
 
 .logo{
     width: 250px;
+    cursor: pointer;
 }
 
 .navbar-option{

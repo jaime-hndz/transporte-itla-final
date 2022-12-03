@@ -1,29 +1,21 @@
 import React from 'react'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import Box from '@mui/material/Box';
 import MenuItem from '@mui/material/MenuItem';
 import Typography from '@mui/material/Typography';
 
-export const Navbar = ({options,pages}) => {
+export const Navbar = ({options}) => {
   return (
     <>
       <Box sx={{ flexGrow: 1, display: { xs: 'flex' } }}>
-        {pages.map((page) => (
-          <MenuItem key={page}>
-            <Typography textAlign="center" style={{color: '#0E6CB4'}}>{page}</Typography>
-          </MenuItem>
+        {options.map((opt) => (
+          <Link to={opt.path}>
+            <MenuItem key={opt.text}>
+              <Typography textAlign="center" style={{color: '#0E6CB4', fontWeight: 'bold'}}>{opt.text}</Typography>
+            </MenuItem>
+          </Link>
         ))}
       </Box>
-      {/* <div className='navbar'>
-          {options.map((opt, i) => {
-              return(
-                  <Link to={opt.path} className='navbar-option' key={i} >
-                    <div>{opt.text}</div>
-                    <div>{opt.icon}</div> 
-                  </Link>
-              )
-          })}
-      </div>   */}
     </>
   )
 }

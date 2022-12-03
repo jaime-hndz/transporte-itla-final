@@ -10,32 +10,43 @@ export const StudentOptions = [
     {
         text: 'Inicio',
         path: '/',
-        icon: <HomeIcon />
+        icon: <HomeIcon />,
+        important: true
     },
     {
         text: 'Ver solicitudes',
         path: '/solicitudes',
-        icon: <ConfirmationNumberIcon />
+        icon: <ConfirmationNumberIcon />,
+        important: true
+
     },
     {
         text: 'Tickets Reservados',
         path: '/tickets',
-        icon: <LocalActivityIcon />
+        icon: <LocalActivityIcon />,
+        important: true
+
     },
     {
         text: 'Formas de pago',
         path: '/formas',
-        icon: <PointOfSaleIcon />
+        icon: <PointOfSaleIcon />,
+        important: false
+
     },    
     {
         text: 'Horarios',
         path: '/horarios',
-        icon: <AccessTimeFilledIcon />
+        icon: <AccessTimeFilledIcon />,
+        important: false
+
     },
     {
         text: 'Saldo',
         path: '/saldo',
-        icon: <PaidIcon />
+        icon: <PaidIcon />,
+        important: false
+
     }  
   
 ]
@@ -44,12 +55,16 @@ export const AdminOptions = [
     {
         text: 'Inicio',
         path: '/',
-        icon: <HomeIcon />
+        icon: <HomeIcon />,
+        important: true
+
     },
     {
         text: 'Administrar viajes',
         path: '/administrar',
-        icon: <AdminPanelSettingsIcon />
+        icon: <AdminPanelSettingsIcon />,
+        important: true
+
     },
   
 ]
