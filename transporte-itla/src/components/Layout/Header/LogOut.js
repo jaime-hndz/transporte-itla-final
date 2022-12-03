@@ -36,15 +36,6 @@ export const LogOut = ({ usuario }) => {
 
   return (
     <>
-      {/* <div
-        style={{ display: "flex", cursor: "pointer", color: "black" }}
-        onClick={LoggingOut}
-      >
-        <div>{usuario}</div>
-        <div>
-          <LogoutIcon />
-        </div>
-      </div> */}
       <div>
         <IconButton
           size="large"

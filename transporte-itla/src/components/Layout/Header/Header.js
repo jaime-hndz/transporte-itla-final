@@ -22,7 +22,9 @@ export const  Header = () =>{
                 : AdminOptions.filter((opt) => opt.important === true)
             }
           />
-          <SideBar />
+          <SideBar
+            options={usuario.idTipo === 1 ? StudentOptions : AdminOptions}
+          />
           <LogOut usuario={usuario.nombre + " " + usuario.apellido} />
         </Toolbar>
       </AppBar>
