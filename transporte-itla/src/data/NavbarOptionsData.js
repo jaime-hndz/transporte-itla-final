@@ -5,6 +5,7 @@ import PointOfSaleIcon from '@mui/icons-material/PointOfSale';
 import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
 import PaidIcon from '@mui/icons-material/Paid';
 import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
+import MapIcon from '@mui/icons-material/Map';
 
 export const StudentOptions = [
     {
@@ -33,7 +34,14 @@ export const StudentOptions = [
         icon: <PointOfSaleIcon />,
         important: false
 
-    },    
+    },  
+    {
+        text: 'Rutas',
+        path: '/rutas',
+        icon: <MapIcon />,
+        important: true
+
+    },  
     {
         text: 'Horarios',
         path: '/horarios',

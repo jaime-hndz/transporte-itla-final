@@ -13,6 +13,7 @@ import { AdminTravelsScreen } from "../pages/AdminScreens/AdminTravelsScreen";
 import { PaidTicketsScreen } from "../pages/StudentScreens/PaidTicketsScreen";
 import { BalanceScreen } from "../pages/StudentScreens/BalanceScreen";
 import { usuario } from "../helpers/UserProvider";
+import { RoutesMapScreen } from "../pages/InformationScreens/RoutesMapScreen";
 
 const PrivateRoutes = () => {
 
@@ -40,6 +41,8 @@ const PrivateRoutes = () => {
                 <Route path="/horarios" element={<ScheduleScreen />} />
                 <Route path="/administrar" element={<AdminTravelsScreen />} />
                 <Route path="/saldo" element={<BalanceScreen />} />
+                <Route path="/rutas" element={<RoutesMapScreen />} />
+
               </Routes>
             </Paper>
           </div>

@@ -31,5 +31,5 @@ a{
  
 .allContainer{
     max-height: calc(100vh - 87px);
-    overflow-y: scroll;
+    overflow-y: auto;
 }
