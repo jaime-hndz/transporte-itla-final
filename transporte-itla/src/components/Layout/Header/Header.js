@@ -21,7 +21,7 @@ export const  Header = () =>{
           <Logo />
           <Navbar options={usuario.idTipo === 1 ? StudentOptions : AdminOptions} pages={pages} />
           <SideBar />
-          <LogOut />
+          <LogOut usuario={usuario.nombre+" "+usuario.apellido} />
         </Toolbar>
       </AppBar>
     </Box>
