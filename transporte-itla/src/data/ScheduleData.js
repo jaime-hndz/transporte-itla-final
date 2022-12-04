@@ -11,87 +11,108 @@ export const WeekSchedule = [
         paradas: [
             {
                 title: "PINTURA AVE. ISABEL AGUIAR (Después de cruzar) PARADA OMSA",
-                horarios: ["6:50 am","8:30 am","12:20 pm","4:20 pm"]
+                horarios: ["6:50 am","8:30 am","12:20 pm","4:20 pm"],
+                ubicacion: [18.452109585769477, -69.97992888910164],
             },
             {
                 title: "SECRETARIA FUERZAS ARMADAS PARADA OMSA",
-                horarios: ["6:55 am","8:35 am","12:25 pm","4:05 pm"]
+                horarios: ["6:55 am","8:35 am","12:25 pm","4:05 pm"],
+                ubicacion: [18.44970025281566, -69.97242131766274],
             },
             {
                 title: "AVE. CAONABO (Después de cruzar) PARADA OMSA",
-                horarios: ["6:55 am","8:38 am","12:27 pm","4:17 pm"]
+                horarios: ["6:55 am","8:38 am","12:27 pm","4:17 pm"],
+                ubicacion: [18.449746860222614, -69.96791957576544],
             },
             {
                 title: "AVE. PRIVADA (Después de cruzar) PARADA OMSA",
-                horarios: ["7:00 am","8:45 am","12:30 pm","4:20 pm"]
+                horarios: ["7:00 am","8:45 am","12:30 pm","4:20 pm"],
+                ubicacion: [18.45189935046611, -69.96075370900867],
             },
             {
                 title: "AVE. NÚÑEZ DE CÁCERES (Después de cruzar) PARADA OMSA",
-                horarios: ["7:00 am","8:55 am","12:35 pm","4:25 pm"]
+                horarios: ["7:00 am","8:55 am","12:35 pm","4:25 pm"],
+                ubicacion: [18.454778401959985, -69.95425642342444],
             },
             {
                 title: "AVE. DR. ARTURO F. DEFILLÓ (Después de cruzar) PARADA OMSA",
-                horarios: ["7:00 am","9:00 am","12:37 pm","4:27 pm"]
+                horarios: ["7:00 am","9:00 am","12:37 pm","4:27 pm"],
+                ubicacion: [18.45793969609816, -69.94669643635085],
             },
             {
                 title: "AVE. WINSTON CHURCHILL (Después de cruzar) PARADA OMSA",
-                horarios: ["7:05 am","9:10 am","12:40 pm","4:30 pm"]
+                horarios: ["7:05 am","9:10 am","12:40 pm","4:30 pm"],
+                ubicacion: [18.462765023506527, -69.93548068563518],
             },
             {
                 title: "AVE. ABRAHAM LINCOLN (Después de cruzar) PARADA OMSA",
-                horarios: ["7:09 am","9:15 am","12:45 pm","4:35 pm"]
+                horarios: ["7:09 am","9:15 am","12:45 pm","4:35 pm"],
+                ubicacion: [18.465951479589904, -69.92918510837777],
             },
             {
                 title: "AVE. TIRADENTE (Después de cruzar) PARADA OMSA",
-                horarios: ["7:12 am","9:20 am","12:50 pm","4:40 pm"]
+                horarios: ["7:12 am","9:20 am","12:50 pm","4:40 pm"],
+                ubicacion: [18.46959439176816, -69.92261409174041],
             },
             {
                 title: "AVE. MÁXIMO GÓMEZ (Después de cruzar) PARADA OMSA",
-                horarios: ["7:15 am","9:25 am","12:55 pm","4:45 pm"]
+                horarios: ["7:15 am","9:25 am","12:55 pm","4:45 pm"],
+                ubicacion: [18.476178362021916, -69.91238845042706],
             },
             {
                 title: "AVE. LEOPOLDO NAVARRO (Después de cruzar) PARADA OMSA",
-                horarios: ["7:19 am","9:30 am","1:00 pm","4:50 pm"]
+                horarios: ["7:19 am","9:30 am","1:00 pm","4:50 pm"],
+                ubicacion: [18.475679350908013, -69.90670750401065],
             },
             {
                 title: "AVE. DR. DELGADO DON BOSCO",
-                horarios: ["7:23 am","9:32 am","1:05 pm","4:55 pm"]
+                horarios: ["7:23 am","9:32 am","1:05 pm","4:55 pm"],
+                ubicacion: [18.47863906377541, -69.90036294144345],
             },
             {
                 title: "AVE. MÉXICO (Después de cruzar la DUARTE) PARADA OMSA",
-                horarios: ["7:26 am","9:36 am","1:15 pm","5:00 pm"]
+                horarios: ["7:26 am","9:36 am","1:15 pm","5:00 pm"],
+                ubicacion: [18.47954631257707, -69.88830486572895],
             },
             {
                 title: "C/ REAL (Después de cruzar la Ave. 25 de FEBRERO) PARADA OMSA",
-                horarios: ["7:30 am","9:40 am","1:20 pm","5:05 pm"]
+                horarios: ["7:30 am","9:40 am","1:20 pm","5:05 pm"],
+                ubicacion: [18.48265317574112, -69.877652321557],
             },
             {
                 title: "AVE. VENEZUELA (Después de cruzar) PARADA OMSA",
-                horarios: ["7:33 am","9:42 am","1:25 pm","5:10 pm"]
+                horarios: ["7:33 am","9:42 am","1:25 pm","5:10 pm"],
+                ubicacion: [18.48511010067771, -69.87002417174125],
             },
             {
                 title: "AVE. SABANA LARGA (Antes de Cruzar)",
-                horarios: ["7:35 am","9:44 am","1:30 pm","5:15 pm"]
+                horarios: ["7:35 am","9:44 am","1:30 pm","5:15 pm"],
+                ubicacion: [18.484795779706808, -69.86601568727284],
             },
             {
                 title: "BOMBA SHELL – FRENTE AL DARÍO CONTRERAS",
-                horarios: ["7:38 am","9:45 am","1:33 pm","5:18 pm"]
+                horarios: ["7:38 am","9:45 am","1:33 pm","5:18 pm"],
+                ubicacion: [18.484695243772137, -69.8628003515738],
             },
             {
                 title: "LOS TRES OJOS (Puente Peatonal)",
-                horarios: ["7:40 am","9:48 am","1:35 pm","5:20 pm"]
+                horarios: ["7:40 am","9:48 am","1:35 pm","5:20 pm"],
+                ubicacion: [18.481688717387875, -69.84464319975727],
             },
             {
                 title: "PUENTE JUAN CARLOS (Después de cruzar) PARADA OMSA",
-                horarios: ["7:43 am","9:50 am","1:40 pm","5:25 pm"]
+                horarios: ["7:43 am","9:50 am","1:40 pm","5:25 pm"],
+                ubicacion: [18.469480367279438, -69.82992623176699],
             },
             {
                 title: "AUTOPISTA LAS AMÉRICAS KM. 101/2 BARRIO NUEVO",
-                horarios: ["7:45 am","9:52 am","1:45 pm","5:30 pm"]
+                horarios: ["7:45 am","9:52 am","1:45 pm","5:30 pm"],
+                ubicacion: [18.464435434794904, -69.81084741718392],
             },
             {
                 title: "AUTOPISTA LAS AMÉRICAS KM. 12 LA LLAVE",
-                horarios: ["7:45 am","9:55 am","1:45 pm","5:30 pm"]
+                horarios: ["7:45 am","9:55 am","1:45 pm","5:30 pm"],
+                ubicacion: [18.464793404811516, -69.80698466973628],
             },
         ]
     },
@@ -107,55 +128,68 @@ export const WeekSchedule = [
         paradas: [
             {
                 title: "HNAS. MIRABAL ESQ. CHARLES G. (LA SIRENA, VILLA MELLA)",
-                horarios: ["6:55 am","8:00 am","12:50 pm","4:45 pm"]
+                horarios: ["6:55 am","8:00 am","12:50 pm","4:45 pm"],
+                ubicacion: [18.545450257269575, -69.89862967803055],
             },
             {
                 title: "SABANA PERDIDA (FRENTE AL OLE)",
-                horarios: ["7:05 am","8:05 am","12:55 pm","4:50 pm"]
+                horarios: ["7:05 am","8:05 am","12:55 pm","4:50 pm"],
+                ubicacion: [18.5427915453199, -69.85994383391794],
             },
             {
                 title: "CANSINO (FRENTE COLMADO COME Y BEBE)",
-                horarios: ["7:13 am","8:10 am","12:58 pm","4:53 pm"]
+                horarios: ["7:13 am","8:10 am","12:58 pm","4:53 pm"],
+                ubicacion: [18.52935553115711, -69.84226820661318],
             },
             {
                 title: "CASI ESQ. CARRETERA MELLA (FRENTE REPUESTO H5)",
-                horarios: ["7:18 am","8:15 am","1:03 pm","4:55 pm"]
+                horarios: ["7:18 am","8:15 am","1:03 pm","4:55 pm"],
+                ubicacion: [18.519350000727705, -69.83486465814161],
             },
             {
                 title: "CLUB LOS TRINITARIOS (FRENTE SUPER MERCADO SUPER-NACIONAL)",
-                horarios: ["7:20 am","8:17 am","1:05 pm","5:00 pm"]
+                horarios: ["7:20 am","8:17 am","1:05 pm","5:00 pm"],
+                ubicacion: [18.513537152688745, -69.83169499566499],
             },
             {
                 title: "INVIVIENDA (FRENTE A CLARO)",
-                horarios: ["7:28 am","8:23 am","1:08 pm","5:05 pm"]
+                horarios: ["7:28 am","8:23 am","1:08 pm","5:05 pm"],
+                ubicacion: [18.50760166343414, -69.82836199253524],
             },
             {
                 title: "VILLA CARMEN (PARADA OMSA)",
-                horarios: ["7:32 am","8:27 am","1:12 pm","5:10 pm"]
+                horarios: ["7:32 am","8:27 am","1:12 pm","5:10 pm"],
+                ubicacion: [18.501147293725495, -69.82470513049104],
             },
             {
                 title: "MENDOZA (PARADA OMSA)",
-                horarios: ["7:38 am","8:32 am","1:15 pm","5:15 pm"]
+                horarios: ["7:38 am","8:32 am","1:15 pm","5:15 pm"],
+                ubicacion: [18.49918243751203, -69.82374509891709],
             },
             {
                 title: "SAN ISIDRO DESPUÉS DE CRUZAR (PARADA OMSA)",
-                horarios: ["7:43 am","8:37 am","1:20 pm","5:20 pm"]
+                horarios: ["7:43 am","8:37 am","1:20 pm","5:20 pm"],
+                ubicacion: [18.489321549782446, -69.82556645772443],
             },
             {
                 title: "PARADA OMSA – FRENTE A LA PLANTA CREDIGAS (BRISA DEL ESTE)",
-                horarios: ["7:44 am","7:44 am","1:25 pm","5:25 pm"]
+                horarios: ["7:44 am","7:44 am","1:25 pm","5:25 pm"],
+                ubicacion: [18.480777904251926, -69.82753522703294],
             },
             {
                 title: "PUENTE JUAN CARLOS",
-                horarios: ["7:48 am","8:48 am","1:30 pm","5:30 pm"]
+                horarios: ["7:48 am","8:48 am","1:30 pm","5:30 pm"],
+                ubicacion: [18.469480367279438, -69.82992623176699],
             },
             {
                 title: "AUTOPISTA LAS AMÉRICAS KM. 101/2 BARRIO NUEVO",
-                horarios: ["7:50 am","8:50 am","1:35 pm","5:35 pm"]
+                horarios: ["7:50 am","8:50 am","1:35 pm","5:35 pm"],
+                ubicacion: [18.464435434794904, -69.81084741718392],
             },
             {
                 title: "AUTOPISTA LAS AMÉRICAS KM. 12 LA LLAVE",
-                horarios: ["7:52 am","8:53 am","1:40 pm","5:40 pm"]
+                horarios: ["7:52 am","8:53 am","1:40 pm","5:40 pm"],
+                ubicacion: [18.464793404811516, -69.80698466973628],
             },
         ]
     },
@@ -168,71 +202,88 @@ export const WeekSchedule = [
         paradas: [
             {
                 title: "Calle JOSE HAZIM AZAR (Frente al Supermercado JUMBO)",
-                horarios: ["6:50 am", "2:50 pm"]
+                horarios: ["6:50 am", "2:50 pm"],
+                ubicacion: [18.454991140862134, -69.29855431329909],
             },
             {
                 title: "Calle LUIS AMIAMA TIO frente a la BOMBA SHELL",
-                horarios: ["6:53 am", "2:53 pm"]
+                horarios: ["6:53 am", "2:53 pm"],
+                ubicacion: [18.456628966559546, -69.29324142122783],
             },
             {
                 title: "AV. F. A.CAAMAÑO D. (Frente al Banco Popular de la UCE)",
-                horarios: ["6:55 am", "2:55 pm"]
+                horarios: ["6:55 am", "2:55 pm"],
+                ubicacion: [18.460161918252126, -69.29338031087025],
             },
             {
                 title: "AV. F. A.CAAMAñO D. (Frente a la Clinida del Niño)",
-                horarios: ["6:57 am", "2:57 pm"]
+                horarios: ["6:57 am", "2:57 pm"],
+                ubicacion: [18.462013324384053, -69.29463903272132],
             },
             {
-                title: "AV. INDEPENDENCIA (Despues de cruzar frente a Mc Donanls)",
-                horarios: ["7:00 am", "3:00 pm"]
+                title: "AV. INDEPENDENCIA (Después de cruzar frente a Mc Donanls)",
+                horarios: ["7:00 am", "3:00 pm"],
+                ubicacion: [18.464289160535962, -69.2960906663109],
             },
             {
-                title: "AV. MAURICIO BAEZ(Despues de cruzar frente al parquesito)",
-                horarios: ["7:04 am", "3:04 pm"]
+                title: "AV. MAURICIO BAEZ(Después de cruzar frente al parquesito)",
+                horarios: ["7:04 am", "3:04 pm"],
+                ubicacion: [18.465223593470895, -69.29775873394418],
             },
             {
                 title: "AVE. LAUREANO CANTO (Antes de cruzar frente al Estadio Tetelo Vargas, en el parquesito)",
-                horarios: ["7:06 am", "3:06 pm"]
+                horarios: ["7:06 am", "3:06 pm"],
+                ubicacion: [18.462854610080104, -69.30489464498163],
             },
             {
-                title: "CALLE SIMON BOLIVAR (Despues de cruzar, frente a la Bomba Petronan)",
-                horarios: ["7:10 am", "3:10 pm"]
+                title: "CALLE SIMON BOLIVAR (Después de cruzar, frente a la Bomba Petronan)",
+                horarios: ["7:10 am", "3:10 pm"],
+                ubicacion: [18.462223914399022, -69.30765493965083],
             },
             {
                 title: "CALLE MAXIMILIANO GOMEZ (Antes de cruzar frente a Importadora Ariang)",
-                horarios: ["7:12 am", "3:12 pm"]
+                horarios: ["7:12 am", "3:12 pm"],
+                ubicacion: [18.461571910769592, -69.31041337355194],
             },
             {
                 title: "CALLE JUAN ACOSTA (Antes de cruzar, frente a Escuela Santa Clara)",
-                horarios: ["7:15 am", "3:15 pm"]
+                horarios: ["7:15 am", "3:15 pm"],
+                ubicacion: [18.46097892904128, -69.31285629043188],
             },
             {
                 title: "CALLE MARIA ANTONIA QUIRICO (Antes de cruzar puente peatonal, Destacamento Policial)",
-                horarios: ["7:18 am", "3:18 pm"]
+                horarios: ["7:18 am", "3:18 pm"],
+                ubicacion: [18.458410473550362, -69.31654050252894],
             },
             {
                 title: "AUTOPISTA LAS AMERICAS (Boca Chica, Semaforo, frente a a Bomba total)",
-                horarios: ["7:40 am", "3:40 pm"]
+                horarios: ["7:40 am", "3:40 pm"],
+                ubicacion: [18.45451643206692, -69.60560378858789],
             },
             {
                 title: "AUTOPISTA LAS AMERICAS (Boca Chica, frente a a Bomberos)",
-                horarios: ["7:43 am", "3:43 pm"]
+                horarios: ["7:43 am", "3:43 pm"],
+                ubicacion: [18.454972994762333, -69.61117755622047],
             },
             {
                 title: "AUTOPISTA LAS AMERICAS (Boca Chica,Puente Peatonal, La Septima)",
-                horarios: ["7:45 am", "3:45 pm"]
+                horarios: ["7:45 am", "3:45 pm"],
+                ubicacion: [18.45103601381961, -69.62816239760531],
             },
             {
                 title: "AUTOPISTA LAS AMERICAS (Frente a la parada de Boca Chica)",
-                horarios: ["7:48 am", "3:48 pm"]
+                horarios: ["7:48 am", "3:48 pm"],
+                ubicacion: [18.448166404317618, -69.63428544251386],
             },
             {
                 title: "AUTOPISTA LAS AMERICAS (Puente Peatonal frente a Claro)",
-                horarios: ["7:51 am", "3:51 pm"]
+                horarios: ["7:51 am", "3:51 pm"],
+                ubicacion: [18.447732357088288, -69.64073055791776],
             },
             {
                 title: "AUTOPISTA LAS AMERICAS (Vistas de Caucedo, debajo del elevado)",
-                horarios: ["7:53 am", "3:53 pm"]
+                horarios: ["7:53 am", "3:53 pm"],
+                ubicacion: [18.448778930530978, -69.65334978870972],
             },
             
         ]
@@ -414,15 +465,15 @@ export const SaturdaySchedule = [
                 horarios: ["7:55 am"]
             },
             {
-                title: "AV. F. A.CAAMAñO D. (Frente a la Clinida del Niño)",
+                title: "AV. F. A.CAAMAñO D. (Frente a la Clínica del Niño)",
                 horarios: ["7:57 am"]
             },
             {
-                title: "AV. INDEPENDENCIA (Despues de cruzar frente a Mc Donanls)",
+                title: "AV. INDEPENDENCIA (Después de cruzar frente a Mc Donanls)",
                 horarios: ["8:00 am"]
             },
             {
-                title: "AV. MAURICIO BAEZ(Despues de cruzar frente al parquesito)",
+                title: "AV. MAURICIO BAEZ(Después de cruzar frente al parquesito)",
                 horarios: ["8:04 am"]
             },
             {
@@ -430,7 +481,7 @@ export const SaturdaySchedule = [
                 horarios: ["8:06 am"]
             },
             {
-                title: "CALLE SIMON BOLIVAR (Despues de cruzar, frente a la Bomba Petronan)",
+                title: "CALLE SIMON BOLIVAR (Después de cruzar, frente a la Bomba Petronan)",
                 horarios: ["8:10 am"]
             },
             {
