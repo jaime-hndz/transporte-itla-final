@@ -2,6 +2,7 @@ export const WeekSchedule = [
     {
         title: "Santo Domingo OESTE (27 de Febrero)",
         subtitle: "Dirección Oeste-Este",
+        color: 'orange',
         horarios: [
             "8:00 am",
             "10:00 am",
@@ -112,13 +113,24 @@ export const WeekSchedule = [
             {
                 title: "AUTOPISTA LAS AMÉRICAS KM. 12 LA LLAVE",
                 horarios: ["7:45 am","9:55 am","1:45 pm","5:30 pm"],
-                ubicacion: [18.464793404811516, -69.80698466973628],
+                ubicacion: [18.46538128576549, -69.77878800078585],
+            },
+            {
+                title: "ITLA",
+                horarios: [
+                    "8:00 am",
+                    "10:00 am",
+                    "2:00 pm",
+                    "6:00 pm"
+                ],
+                ubicacion: [18.45131484797611, -69.66274166572548],
             },
         ]
     },
     {
         title: "Santo Domingo Norte-Este (Charles de Gaulle)",
         subtitle: "Dirección Norte-Sur",
+        color: 'blue',
         horarios: [
             "8:00 am",
             "9:00 am",
@@ -189,12 +201,23 @@ export const WeekSchedule = [
             {
                 title: "AUTOPISTA LAS AMÉRICAS KM. 12 LA LLAVE",
                 horarios: ["7:52 am","8:53 am","1:40 pm","5:40 pm"],
-                ubicacion: [18.464793404811516, -69.80698466973628],
+                ubicacion: [18.46538128576549, -69.77878800078585],
+            },
+            {
+                title: "ITLA",
+                horarios: [
+                    "8:00 am",
+                    "9:00 am",
+                    "2:00 pm",
+                    "6:00 pm"
+                ],
+                ubicacion: [18.45131484797611, -69.66274166572548],
             },
         ]
     },
     {
         title: "San Pedro de Macorís - ITLA (Ave. Francisco Caamaño Deño)",
+        color: 'red',
         horarios: [
             "8:00 am",
             "4:00 pm"
@@ -284,6 +307,14 @@ export const WeekSchedule = [
                 title: "AUTOPISTA LAS AMERICAS (Vistas de Caucedo, debajo del elevado)",
                 horarios: ["7:53 am", "3:53 pm"],
                 ubicacion: [18.448778930530978, -69.65334978870972],
+            },
+            {
+                title: "ITLA",
+                horarios: [
+                    "8:00 am",
+                    "4:00 pm"
+                ],
+                ubicacion: [18.45131484797611, -69.66274166572548],
             },
             
         ]
@@ -382,6 +413,13 @@ export const SaturdaySchedule = [
                 title: "AUTOPISTA LAS AMÉRICAS KM. 12 LA LLAVE",
                 horarios: ["8:40 am", "1:45 pm"]
             },
+            {
+                title: "ITLA",
+                horarios: [
+                    "9:00 am",
+                    "2:00 pm"
+                ],
+            },
         ]
     },
     {
@@ -389,7 +427,7 @@ export const SaturdaySchedule = [
         subtitle: "Dirección Norte-Sur",
         horarios: [
             "9:00 am",
-            "02:00 pm"
+            "2:00 pm"
         ],
         paradas: [
             {
@@ -443,6 +481,13 @@ export const SaturdaySchedule = [
             {
                 title: "AUTOPISTA LAS AMÉRICAS KM. 12 LA LLAVE",
                 horarios: ["08:40 am", "01:40 pm"]
+            },
+            {
+                title: "ITLA",
+                horarios: [
+                    "9:00 am",
+                    "2:00 pm"
+                ],
             },
         ]
     },
@@ -519,6 +564,12 @@ export const SaturdaySchedule = [
             {
                 title: "AUTOPISTA LAS AMERICAS (Vistas de Caucedo, debajo del elevado)",
                 horarios: ["8:53 am"]
+            },
+            {
+                title: "ITLA",
+                horarios: [
+                    "9:00 am",
+                ],
             },
             
         ]
