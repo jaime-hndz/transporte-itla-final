@@ -103,17 +103,17 @@ export const WeekSchedule = [
             {
                 title: "PUENTE JUAN CARLOS (Después de cruzar) PARADA OMSA",
                 horarios: ["7:43 am","9:50 am","1:40 pm","5:25 pm"],
-                ubicacion: [18.469480367279438, -69.82992623176699],
+                ubicacion: [18.469380367279438, -69.82982623176699],
             },
             {
                 title: "AUTOPISTA LAS AMÉRICAS KM. 101/2 BARRIO NUEVO",
                 horarios: ["7:45 am","9:52 am","1:45 pm","5:30 pm"],
-                ubicacion: [18.464435434794904, -69.81084741718392],
+                ubicacion: [18.464335434794904, -69.81074741718392],
             },
             {
                 title: "AUTOPISTA LAS AMÉRICAS KM. 12 LA LLAVE",
                 horarios: ["7:45 am","9:55 am","1:45 pm","5:30 pm"],
-                ubicacion: [18.46538128576549, -69.77878800078585],
+                ubicacion: [18.46528128576549, -69.77868800078585],
             },
             {
                 title: "ITLA",
