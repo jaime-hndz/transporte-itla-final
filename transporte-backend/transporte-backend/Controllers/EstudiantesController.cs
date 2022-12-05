@@ -72,6 +72,31 @@ namespace transporte_backend.Controllers
             return NoContent();
         }
 
+        [HttpPut("recargar/{id}/{valor}")]
+        public async Task<IActionResult> Recargar(string id, int valor)
+        {
+
+            var estudiante = _context.Estudiantes.Where(u => u.IdEstudiante == id).FirstOrDefault();
+
+            if (estudiante == null)
+            {
+                return NotFound();
+            }
+
+            estudiante.Saldo = estudiante.Saldo + valor;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                throw;
+            }
+
+            return Ok(estudiante.Saldo);
+        }
+
         // POST: api/Estudiantes
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]

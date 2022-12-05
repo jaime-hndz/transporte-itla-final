@@ -13,11 +13,6 @@ export const fetchApi = (endpoint, data, method ='GET') =>{
           },
         })
       case 'PUT':
-
-        console.clear()
-        console.log(url)
-        console.log(JSON.stringify(data))
-
         return axios.put(url, data,{
           // params: data,
           headers: {
