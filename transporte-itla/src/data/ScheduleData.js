@@ -1,7 +1,7 @@
 export const WeekSchedule = [
     {
-        title: "Santo Domingo OESTE (27 de Febrero)",
-        subtitle: "Dirección Oeste-Este",
+        title: "Santo Domingo OESTE",
+        subtitle: "Dirección Oeste-Este (27 de Febrero)",
         color: 'orange',
         horarios: [
             "8:00 am",
@@ -128,8 +128,8 @@ export const WeekSchedule = [
         ]
     },
     {
-        title: "Santo Domingo Norte-Este (Charles de Gaulle)",
-        subtitle: "Dirección Norte-Sur",
+        title: "Santo Domingo NORTE-ESTE",
+        subtitle: "Dirección Norte-Sur (Charles de Gaulle)",
         color: 'blue',
         horarios: [
             "8:00 am",
@@ -216,7 +216,8 @@ export const WeekSchedule = [
         ]
     },
     {
-        title: "San Pedro de Macorís - ITLA (Ave. Francisco Caamaño Deño)",
+        title: "San Pedro de Macorís",
+        subtitle: "Direccion SPM - ITLA (Ave. Francisco Caamaño Deño)",
         color: 'red',
         horarios: [
             "8:00 am",
