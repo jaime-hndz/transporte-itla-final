@@ -47,7 +47,7 @@ export const ScheduleTableRow = ({row}) => {
                   </TableRow>
                 </TableHead>
                 <TableBody>
-                  {row.paradas.map((paradaRow, i) => (
+                  {row.paradas.filter(paradaRow => paradaRow.importante !== false).map((paradaRow, i) => (
                     <TableRow key={i}>
                       <TableCell component="th" scope="row">
                         {paradaRow.title}

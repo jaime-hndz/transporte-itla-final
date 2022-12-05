@@ -21,7 +21,7 @@ export const RoutesMap = () => {
   return (
     <div>
       <Button style={{fontSize: '10px'}} onClick={() => setVer(true)} size='small'>Ver tu ubicacion en el mapa</Button>      
-      <MapContainer className="leaflet-container" center={itla} zoom={15}>
+      <MapContainer className="leaflet-container" center={itla} zoom={11}>
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>  | <a target="blank" href="https://www.google.com/maps/d/u/2/viewer?mid=10bNTYESub5N0jc6x7kYPiUkrKL2ypCAX&ll=18.462327684817264%2C-69.8181437515895&z=13">Ver en google maps</a> '
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -40,9 +40,7 @@ export const RoutesMap = () => {
             />
 
 
-            {ruta.paradas.map((parada,i) => {
-
-                if(i !== ruta.paradas.length -1){
+            {ruta.paradas.filter(parada => parada.importante === true).map((parada,i) => {
                     return (
                         <Marker
                             key={i}
@@ -52,9 +50,8 @@ export const RoutesMap = () => {
                             <Popup>{parada.title} </Popup>
                         </Marker>
                         );
-                }else{
-                  return null
-                }
+                
+
 
             })}
           </React.Fragment>
