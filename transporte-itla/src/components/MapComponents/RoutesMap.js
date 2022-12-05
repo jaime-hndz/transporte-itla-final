@@ -6,7 +6,7 @@ import {
   Popup,
   Polyline,
 } from "react-leaflet";
-import { WeekSchedule } from "../data/ScheduleData";
+import { WeekSchedule } from "../../data/ScheduleData";
 import { Button } from "@mui/material";
 import Legend from "./Legend";
 import { CustomColorMarker } from "./CustomColorMarker";
@@ -20,24 +20,21 @@ export const RoutesMap = () => {
 
   return (
     <div>
-        <div style={{display:'flex'}}>
-      <Button onClick={() => setVer(true)}>Ver tu ubicacion en el mapa</Button>
-        </div>
-            
+      <Button style={{fontSize: '10px'}} onClick={() => setVer(true)} size='small'>Ver tu ubicacion en el mapa</Button>      
       <MapContainer className="leaflet-container" center={itla} zoom={15}>
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>  | <a target="blank" href="https://www.google.com/maps/d/u/2/viewer?mid=10bNTYESub5N0jc6x7kYPiUkrKL2ypCAX&ll=18.462327684817264%2C-69.8181437515895&z=13">Ver en google maps</a> '
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         <LocationMarker ver={ver} />
-        <Legend ver={ver} />
+        <Legend handler={setVer} />
         <Marker position={itla} icon={CustomColorMarker('black')}>
           <Popup>Instituto Tecnológico de Las Américas</Popup>
         </Marker>
         {WeekSchedule.map((ruta, i) => (
-          <>
+          <React.Fragment key={i}>
             <Polyline
-              key={i}
+              
               positions={[ruta.paradas.map((parada) => parada.ubicacion)]}
               color={ruta.color}
             />
@@ -56,11 +53,11 @@ export const RoutesMap = () => {
                         </Marker>
                         );
                 }else{
-                    return null
+                  return null
                 }
 
             })}
-          </>
+          </React.Fragment>
         ))}
       </MapContainer>
     </div>

@@ -1,12 +1,10 @@
 import React from 'react'
-import { RoutesMap } from '../../components/RoutesMap'
-import { PageTitle } from '../../components/PageTitle';
+import { RoutesMap } from '../../components/MapComponents/RoutesMap'
 
 export const RoutesMapScreen = () => {
   return (
     <div>
-        <PageTitle>Mapa de rutas</PageTitle>
-        <RoutesMap />
+      <RoutesMap />
     </div>
   )
 }
