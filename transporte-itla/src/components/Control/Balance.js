@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import { Button } from '@mui/material';
 import Cookies from "universal-cookie";
-import { usuario } from "../helpers/UserProvider";
-import { fetchApi } from "../helpers/fetchApi";
+import { usuario } from "../../helpers/UserProvider";
+import { fetchApi } from "../../helpers/fetchApi";
 
 const cookies = new Cookies();
 

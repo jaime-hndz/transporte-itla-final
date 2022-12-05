@@ -1,5 +1,5 @@
 import React from "react";
-import { PageTitle } from '../../components/PageTitle';
+import { PageTitle } from '../../components/Utils/PageTitle';
 
 export const PaymentMethodsScreen = () => {
   return (

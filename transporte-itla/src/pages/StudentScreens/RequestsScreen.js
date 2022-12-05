@@ -1,6 +1,6 @@
 import React from 'react'
 import { TicketsTable } from '../../components/Tables/TicketsTable'
-import { PageTitle } from '../../components/PageTitle';
+import { PageTitle } from '../../components/Utils/PageTitle';
 
 export const RequestsScreen = () => {
   return (

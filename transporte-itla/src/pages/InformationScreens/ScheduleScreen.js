@@ -1,7 +1,7 @@
 import React from 'react'
 import { ScheduleTable } from '../../components/Tables/ScheduleTable/ScheduleTable'
 import { SaturdaySchedule, WeekSchedule } from '../../data/ScheduleData'
-import { PageTitle } from '../../components/PageTitle';
+import { PageTitle } from '../../components/Utils/PageTitle';
 
 export const ScheduleScreen = () => {
   return (

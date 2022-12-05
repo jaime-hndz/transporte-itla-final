@@ -1,7 +1,7 @@
 import React from 'react'
-import { PageTitle } from '../../components/PageTitle';
-import { AdminTravel } from '../../components/AdminTravel';
-import { CreateTravels } from '../../components/CreateTravels';
+import { PageTitle } from '../../components/Utils/PageTitle';
+import { AdminTravel } from '../../components/ControlComponents/AdminTravel';
+import { CreateTravels } from '../../components/ControlComponents/CreateTravels';
 
 export const AdminTravelsScreen = () => {
   return (

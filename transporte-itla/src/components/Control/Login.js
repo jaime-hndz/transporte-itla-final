@@ -2,10 +2,10 @@ import { useState } from 'react';
 import {Button} from '@mui/material'
 import md5 from 'md5';
 import Cookies from 'universal-cookie';
-import {fetchApi} from '../helpers/fetchApi'
+import {fetchApi} from '../../helpers/fetchApi'
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import { Lock } from '@mui/icons-material';
-import { InputCustom } from './InputCustom';
+import { InputCustom } from '../Utils/InputCustom';
 
 const cookies = new Cookies();
 

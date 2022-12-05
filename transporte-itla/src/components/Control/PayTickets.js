@@ -1,9 +1,9 @@
 import React from "react";
-import { fetchApi } from "../helpers/fetchApi";
+import { fetchApi } from "../../helpers/fetchApi";
 import { useNavigate } from "react-router-dom";
 import Cookies from "universal-cookie";
-import { usuario } from "../helpers/UserProvider";
-import { FooterButton } from "./FooterButton";
+import { usuario } from "../../helpers/UserProvider";
+import { FooterButton } from "../Utils/FooterButton";
 
 const cookies = new Cookies();
 

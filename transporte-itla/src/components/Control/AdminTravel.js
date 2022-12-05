@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { fetchApi } from "../helpers/fetchApi.js"
-import { DataTable } from "./Tables/DataTable";
+import { fetchApi } from "../../helpers/fetchApi.js"
+import { DataTable } from "../Tables/DataTable";
 import moment from "moment";
 
 const columns = [

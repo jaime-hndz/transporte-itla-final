@@ -2,7 +2,7 @@ import { Paper } from "@mui/material";
 import { useEffect } from 'react';
 import { Container } from "@mui/system";
 import React from "react";
-import { Login } from "../components/Login";
+import { Login } from "../components/Control/Login";
 import logo from "../resources/itla-transporte.svg";
 import '../styles/login.css'
 import { usuario } from '../helpers/UserProvider';

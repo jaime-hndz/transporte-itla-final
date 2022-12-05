@@ -3,7 +3,7 @@ import { Button, Input } from "@mui/material";
 import { fetchApi } from "../../helpers/fetchApi.js"
 import { DataTable } from "./DataTable.js";
 import { usuario } from "../../helpers/UserProvider";
-import { FooterButton } from "../FooterButton.js";
+import { FooterButton } from "../Utils/FooterButton.js";
 
 const columns = [
     {
