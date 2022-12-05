@@ -25,7 +25,11 @@ namespace transporte_backend.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Viaje>>> GetViajes()
         {
-            return await _context.Viajes.ToListAsync();
+            return await _context.Viajes
+                .Include(u => u.IdCantidadCuposNavigation)
+                .Include(u => u.IdHorarioNavigation)
+                .Include(u => u.IdRutaNavigation)
+                .ToListAsync();
         }
 
         [HttpGet("ByDate")]

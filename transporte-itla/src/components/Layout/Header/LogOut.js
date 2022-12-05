@@ -64,7 +64,7 @@ export const LogOut = ({ usuario }) => {
           <MenuItem onClick={handleClose} style={{cursor: 'default'}} disableTouchRipple>
             {usuario}
           </MenuItem>
-          <MenuItem onClick={ToBalance} divider>       
+          <MenuItem onClick={User.estudiantes[0] ? ToBalance: null} divider>       
             {User.estudiantes[0] ? <Balance saldo={User.estudiantes[0].saldo} /> : <div style={{color: 'blue'}}>Administrador/a</div>}
           </MenuItem>
           <MenuItem onClick={LoggingOut}>       
