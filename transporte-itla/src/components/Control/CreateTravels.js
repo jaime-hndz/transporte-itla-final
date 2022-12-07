@@ -1,7 +1,10 @@
-import React from 'react'
+import { CreateSingleTravel } from "./CreateSingleTravel"
 
 export const CreateTravels = () => {
+
   return (
-    <div>CreateTravels</div>
+    <div>
+      <CreateSingleTravel />
+    </div>
   )
 }

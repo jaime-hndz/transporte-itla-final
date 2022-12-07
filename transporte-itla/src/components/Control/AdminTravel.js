@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { fetchApi } from "../../helpers/fetchApi.js"
 import { DataTable } from "../Tables/DataTable";
+import {FooterButton} from '../Utils/FooterButton'
+// import { usuario } from "../../helpers/UserProvider.js";
 import moment from "moment";
 
 const columns = [
@@ -43,6 +45,17 @@ export const AdminTravel = () => {
     useEffect(() => {
         handleLoad()
     }, [])
+
+    const EliminarViajes = async () =>{
+      console.log(selectionModel)
+      await fetchApi(`viajes/deleteviajes`, selectionModel, 'DELETE')
+      .then(response => {
+       console.log(response.data)
+      })
+      .catch((error) => {
+      console.log(error);
+      });
+  }
     
     const handleLoad = async () =>{
       await fetchApi("viajes")
@@ -59,6 +72,7 @@ export const AdminTravel = () => {
     rows={viajes}
     columns={columns}
     rowId='idViaje'
+    footer={<FooterButton onClick={EliminarViajes}>Eliminar viajes seleccionados</FooterButton>}
     seleccion={selectionModel}
     setSeleccion={setSelectionModel}
   />

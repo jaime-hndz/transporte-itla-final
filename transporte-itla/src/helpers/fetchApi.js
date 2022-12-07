@@ -20,6 +20,9 @@ export const fetchApi = (endpoint, data, method ='GET') =>{
             "Content-Type": "application/json",
           },
         })
+      case 'DELETE':
+        console.log(data)
+          return axios.delete(url,{ data: data})
       default:
         return axios.get(url, {
           params: data,

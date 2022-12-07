@@ -115,7 +115,7 @@ namespace transporte_backend.Controllers
             return Ok();
         }
 
-        // DELETE: api/Viajes/5
+
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteViaje(int id)
         {
@@ -126,6 +126,29 @@ namespace transporte_backend.Controllers
             }
 
             _context.Viajes.Remove(viaje);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
+        }
+
+        [HttpDelete("DeleteViajes")]
+        public async Task<IActionResult> DeleteViajes(int[] viajes)
+        {
+            List<Viaje> tickets = new List<Viaje>();
+
+            foreach (int id in viajes)
+            {
+                var  viaj = _context.Viajes.Where(v => v.IdViaje == id).FirstOrDefault();
+
+                if (viaj == null)
+                {
+                    return NotFound();
+                }
+
+                tickets.Add(viaj);
+            }
+
+            _context.Viajes.RemoveRange(tickets);
             await _context.SaveChangesAsync();
 
             return NoContent();
