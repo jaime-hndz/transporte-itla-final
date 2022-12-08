@@ -91,7 +91,7 @@ namespace transporte_backend.Controllers
         // POST: api/Viajes
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Viaje>> PostViaje(Viaje viaje)
+        public async Task<ActionResult<Viaje>> PostViaje([FromQuery] Viaje viaje)
         {
             _context.Viajes.Add(viaje);
             await _context.SaveChangesAsync();

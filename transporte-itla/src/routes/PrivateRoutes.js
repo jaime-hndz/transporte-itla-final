@@ -14,6 +14,7 @@ import { PaidTicketsScreen } from "../pages/StudentScreens/PaidTicketsScreen";
 import { BalanceScreen } from "../pages/StudentScreens/BalanceScreen";
 import { usuario } from "../helpers/UserProvider";
 import { RoutesMapScreen } from "../pages/InformationScreens/RoutesMapScreen";
+import { AddTravelScreen } from "../pages/AdminScreens/AddTravelScreen";
 
 const PrivateRoutes = () => {
 
@@ -42,6 +43,7 @@ const PrivateRoutes = () => {
                 <Route path="/administrar" element={<AdminTravelsScreen />} />
                 <Route path="/saldo" element={<BalanceScreen />} />
                 <Route path="/rutas" element={<RoutesMapScreen />} />
+                <Route path="/agregarviaje" element={<AddTravelScreen />} />
 
               </Routes>
             </Paper>

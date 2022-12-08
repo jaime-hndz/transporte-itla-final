@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { fetchApi } from "../../helpers/fetchApi.js"
 import { DataTable } from "../Tables/DataTable";
 import {FooterButton} from '../Utils/FooterButton'
-// import { usuario } from "../../helpers/UserProvider.js";
 import moment from "moment";
 
 const columns = [
@@ -18,7 +17,7 @@ const columns = [
     },
     {
         field: 'fecha',
-        headerName: 'Futa',
+        headerName: 'Fecha',
         description: 'Es la fecha del viaje',
         sortable: false,
         width: 300,

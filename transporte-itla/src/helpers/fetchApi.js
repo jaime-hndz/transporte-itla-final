@@ -5,6 +5,9 @@ export const fetchApi = (endpoint, data, method ='GET') =>{
     var url = `${BaseUrl}${endpoint}`;
     switch (method) {
       case 'POST':
+        console.log(data)
+        console.log(url)
+
         return axios.post(url, null,{
           params: data,
           headers: {

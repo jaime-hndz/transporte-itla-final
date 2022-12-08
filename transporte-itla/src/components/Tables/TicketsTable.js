@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { fetchApi } from "../../helpers/fetchApi.js";
 import { DataTable } from "./DataTable.js";
-import { DeleteTicket } from "../ControlComponents/DeleteTicket.js";
-import { PayTickets } from "../ControlComponents/PayTickets.js";
+import { DeleteTicket } from "../Control/DeleteTicket.js";
+import { PayTickets } from "../Control/PayTickets.js";
 import { usuario } from "../../helpers/UserProvider";
 
 const columns = [

@@ -16,9 +16,9 @@ namespace transporte_backend.Models
         public int IdHorario { get; set; }
         public int IdCantidadCupos { get; set; }
 
-        public virtual CantidadCupo IdCantidadCuposNavigation { get; set; } = null!;
-        public virtual Horario IdHorarioNavigation { get; set; } = null!;
-        public virtual Ruta IdRutaNavigation { get; set; } = null!;
+        public virtual CantidadCupo? IdCantidadCuposNavigation { get; set; } = null!;
+        public virtual Horario? IdHorarioNavigation { get; set; } = null!;
+        public virtual Ruta? IdRutaNavigation { get; set; } = null!;
         public virtual ICollection<Ticket> Tickets { get; set; }
     }
 }

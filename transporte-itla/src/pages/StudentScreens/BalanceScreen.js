@@ -1,5 +1,5 @@
 import React from 'react'
-import { Balance } from '../../components/ControlComponents/Balance'
+import { Balance } from '../../components/Control/Balance'
 import { PageTitle } from '../../components/Utils/PageTitle';
 
 
