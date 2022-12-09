@@ -6,11 +6,13 @@ import FormControl from "@mui/material/FormControl";
 import Box from "@mui/material/Box";
 import { Button } from '@mui/material';
 import { fetchApi } from "../../helpers/fetchApi";
+import moment from "moment";
 
 export const ModifyTravelForm = ({viaje}) => {
-  const [formValues, setformValues] = useState({
-    idViaje: 0
-  });
+  const [formValues, setformValues] = useState(viaje);
+
+  console.clear()
+  console.log(viaje)
 
   const handleChange = async (e) => {
     console.log(e.target.value);
@@ -21,15 +23,9 @@ export const ModifyTravelForm = ({viaje}) => {
   };
 
   const Submit = async () => {
-    await fetchApi(`viajes`, formValues, 'POST')
+    await fetchApi(`viajes/${formValues.idViaje}`, formValues, 'PUT')
     .then((response) => {
-        console.log(response)
-        setformValues({
-          idViaje: 0,
-          idRuta: '',
-          idHorario: '',
-          idCantidadCupos: ''
-        })
+      console.log(response)
         
     })
     .catch((error) => {
@@ -96,11 +92,11 @@ export const ModifyTravelForm = ({viaje}) => {
       </FormControl>
 
       <FormControl fullWidth style={{marginBlock: '10px'}}>
-        <Input labelId='fecha-label' type="date" onChange={handleChange} required name="fecha" />
+        <Input defaultValue={moment(formValues.fecha).utc().format("yyyy-MM-DD")} labelId='fecha-label' type="date" onChange={handleChange} required name="fecha" />
       </FormControl>
 
       <FormControl fullWidth style={{marginBlock: '10px'}}>
-      <Button variant="outlined" onClick={Submit}>Agregar</Button>
+      <Button variant="outlined" onClick={Submit}>Editar</Button>
       </FormControl>
     </Box>
   );

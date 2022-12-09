@@ -70,7 +70,7 @@ namespace transporte_backend.Controllers
         // PUT: api/Tickets/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutTicket(int id, Ticket ticket)
+        public async Task<IActionResult> PutTicket(int id, [FromBody] Ticket ticket)
         {
             if (id != ticket.IdTicket)
             {
