@@ -16,6 +16,7 @@ import { usuario } from "../helpers/UserProvider";
 import { RoutesMapScreen } from "../pages/InformationScreens/RoutesMapScreen";
 import { AddTravelScreen } from "../pages/AdminScreens/AddTravelScreen";
 import { ModifyTravelScreen } from "../pages/AdminScreens/ModifyTravelScreen";
+import { CheckTravelsScreen } from "../pages/AdminScreens/CheckTravelsScreen";
 
 const PrivateRoutes = () => {
 
@@ -46,7 +47,7 @@ const PrivateRoutes = () => {
                 <Route path="/rutas" element={<RoutesMapScreen />} />
                 <Route path="/agregarviaje" element={<AddTravelScreen />} />
                 <Route path="/modificarviaje" element={<ModifyTravelScreen />} />
-
+                <Route path="/checkviaje" element={<CheckTravelsScreen />} />
               </Routes>
             </Paper>
           </div>

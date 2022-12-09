@@ -6,6 +6,8 @@ import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
 import PaidIcon from '@mui/icons-material/Paid';
 import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
 import MapIcon from '@mui/icons-material/Map';
+import AddBoxIcon from '@mui/icons-material/AddBox';
+import QrCodeScannerIcon from '@mui/icons-material/QrCodeScanner';
 
 export const StudentOptions = [
     {
@@ -74,5 +76,20 @@ export const AdminOptions = [
         important: true
 
     },
+    {
+        text: 'Agregar viaje',
+        path: '/agregarviaje',
+        icon: <AddBoxIcon />,
+        important: false
+
+    },
+    {
+        text: 'Checkear viajes',
+        path: '/checkviaje',
+        icon: <QrCodeScannerIcon />,
+        important: true
+
+    },
+
   
 ]
