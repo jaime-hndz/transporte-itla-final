@@ -1,7 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react';
+import { QrReader } from 'react-qr-reader';
 
-export const CheckTravels = () => {
+export const CheckTravels = ({viaje}) => {
+
+  const [data, setData] = useState('No result');
   return (
-    <div>CheckTravels</div>
+    <>
+      <QrReader
+        onResult={(result, error) => {
+          if (!!result) {
+            setData(result?.text);
+          }
+        }}
+        style={{ width: '500px' }}
+      />
+      <p>{data}</p>
+    </>
   )
 }

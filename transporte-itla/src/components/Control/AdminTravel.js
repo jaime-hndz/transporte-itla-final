@@ -40,6 +40,7 @@ const columns = [
     headerName: "",
     description: "¿Desea eliminar el ticket reservado?",
     sortable: false,
+    width: 150,
     renderCell: (params) => {
       return <Actions viaje={params.row} />;
     },
