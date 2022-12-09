@@ -30,6 +30,7 @@ export const CreateSingleTravel = () => {
           idHorario: '',
           idCantidadCupos: ''
         })
+        
     })
     .catch((error) => {
     console.log(error);
