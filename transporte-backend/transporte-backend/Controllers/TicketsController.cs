@@ -67,6 +67,20 @@ namespace transporte_backend.Controllers
             return ticket;
         }
 
+        [HttpGet("check/{idViaje}/{idEstudiante}")]
+        public ActionResult<Boolean> Check(int idViaje, string idEstudiante)
+        {
+            bool check = false;
+            int count = _context.Tickets.Where(t => t.IdViaje == idViaje && t.IdEstudiante == idEstudiante && t.IdEstadoTicket == 2).Count();
+
+            if (count > 0)
+            {
+                check = true;
+            }
+
+            return check;
+        }
+
         // PUT: api/Tickets/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]

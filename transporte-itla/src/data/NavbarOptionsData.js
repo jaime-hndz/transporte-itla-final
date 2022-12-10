@@ -6,6 +6,7 @@ import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
 import PaidIcon from '@mui/icons-material/Paid';
 import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
 import MapIcon from '@mui/icons-material/Map';
+import AddBoxIcon from '@mui/icons-material/AddBox';
 
 export const StudentOptions = [
     {
@@ -72,6 +73,13 @@ export const AdminOptions = [
         path: '/administrar',
         icon: <AdminPanelSettingsIcon />,
         important: true
+
+    },
+    {
+        text: 'Agregar viaje',
+        path: '/agregarviaje',
+        icon: <AddBoxIcon />,
+        important: false
 
     },
   
