@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
 import { QrReader } from 'react-qr-reader';
 import {fetchApi} from '../../helpers/fetchApi'
+import { StateCheking } from '../Utils/StateCheking';
 
 export const CheckTravels = ({viaje}) => {
 
+  const [aprove, setAprove] = useState(null);
+
+
+  
   const previewStyle = {
     height: 240,
     width: 320
@@ -13,13 +18,14 @@ export const CheckTravels = ({viaje}) => {
     await fetchApi(`tickets/check/${viaje.idViaje}/${estudiante}`, null, 'GET')
     .then((response) => {
       console.log(response)
+      setAprove(response.data)
     })
     .catch((error) => {
     console.log(error);
     })
   }
 
-  const [data, setData] = useState('No result');
+  const [data, setData] = useState('Sin resultado');
   return (
     <div>
       <div style={{width: '500px', marginInline: 'auto'}}>
@@ -33,8 +39,12 @@ export const CheckTravels = ({viaje}) => {
           style={previewStyle}
           />
       </div>
-      <div style={{width: '500px', marginInline: 'auto'}}>
-        <p>{data}</p>
+      <div style={{width: '500px', marginInline: 'auto', display: 'flex'}}>
+        <div>
+          <p>Revisando estudiante:</p>
+          <h3>{data}</h3>
+        </div>
+        <StateCheking state={aprove} />
       </div>
     </div>
   )

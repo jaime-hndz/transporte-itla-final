@@ -71,7 +71,7 @@ namespace transporte_backend.Controllers
         public ActionResult<Boolean> Check(int idViaje, string idEstudiante)
         {
             bool check = false;
-            int count = _context.Tickets.Where(t => t.IdViaje == idViaje && t.IdEstudiante == idEstudiante && t.IdEstadoTicket == 1).Count();
+            int count = _context.Tickets.Where(t => t.IdViaje == idViaje && t.IdEstudiante == idEstudiante && t.IdEstadoTicket == 2).Count();
 
             if (count > 0)
             {
