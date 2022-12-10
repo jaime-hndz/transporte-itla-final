@@ -88,7 +88,7 @@ export const TicketsTable = ({pagos=false}) => {
       }
       rowId="idTicket"
       seleccion={selectionModel}
-      onSeleccion={(newSelectionModel) => {
+      setSeleccion={(newSelectionModel) => {
         var ticketsSeleccionados = tickets.filter(t => newSelectionModel.includes(t.idTicket))
         var ts = ticketsSeleccionados.map(t => t.idViajeNavigation.idRutaNavigation.precio)
         
