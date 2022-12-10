@@ -163,6 +163,11 @@ namespace transporte_backend.Controllers
             List<Ticket> tickets = new List<Ticket>();
             foreach (var item in viajes)
             {
+                int ts = _context.Tickets.Where(t => t.IdViaje == item && t.IdEstudiante == id).Count();
+                if (ts > 0)
+                {
+                    return BadRequest("Ya habias reservado el ticket "+item);
+                }
                 Ticket ticket = new Ticket
                 {
                     IdTicket = 0,

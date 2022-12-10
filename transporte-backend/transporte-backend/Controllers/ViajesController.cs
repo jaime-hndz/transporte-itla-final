@@ -32,8 +32,8 @@ namespace transporte_backend.Controllers
                 .ToListAsync();
         }
 
-        [HttpGet("ByDate")]
-        public async Task<ActionResult<IEnumerable<Viaje>>> ByDate([FromQuery] DateTime fecha)
+        [HttpGet("ByDate/{idEstudiante}")]
+        public async Task<ActionResult<IEnumerable<Viaje>>> ByDate([FromQuery] DateTime fecha, string idEstudiante)
         {
             return await _context.Viajes
                 .Where(u => u.Fecha == fecha)

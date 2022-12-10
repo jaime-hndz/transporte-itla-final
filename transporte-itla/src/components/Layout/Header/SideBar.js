@@ -12,6 +12,11 @@ import MenuIcon from '@mui/icons-material/Menu';
 import LogoutIcon from "@mui/icons-material/Logout";
 import { Logo } from './Logo';
 import { Link } from 'react-router-dom';
+import Cookies from "universal-cookie";
+
+
+const cookies = new Cookies();
+
 
 export const SideBar = ({options}) => {
   const [state, setState] = React.useState({
@@ -27,6 +32,11 @@ export const SideBar = ({options}) => {
     }
 
     setState({ ...state, [anchor]: open });
+  };
+
+  const LoggingOut = () => {
+    cookies.remove("usuario", { path: "/" });
+    window.location.href = "./login";
   };
 
   const list = (anchor) => (
@@ -56,7 +66,7 @@ export const SideBar = ({options}) => {
       </List>
       <Divider />
       <ListItem disablePadding>
-        <ListItemButton>
+        <ListItemButton onClick={LoggingOut}>
           <ListItemIcon>
             <LogoutIcon />
           </ListItemIcon>

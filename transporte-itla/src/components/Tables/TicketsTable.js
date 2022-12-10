@@ -4,6 +4,7 @@ import { DataTable } from "./DataTable.js";
 import { DeleteTicket } from "../Control/DeleteTicket.js";
 import { PayTickets } from "../Control/PayTickets.js";
 import { usuario } from "../../helpers/UserProvider";
+import moment from "moment";
 
 const columns = [
     {
@@ -32,6 +33,16 @@ const columns = [
       sortable: false,
       valueGetter: (params) => {
         return `${params.row.idViajeNavigation.idHorarioNavigation.descripcion}`
+      }
+    },
+    {
+      field: 'fecha',
+      headerName: 'Fecha',
+      description: 'Es fecha del viaje',
+      sortable: false,
+      width: 200,
+      valueGetter: (params) => {
+        return `${moment(params.row.idViajeNavigation.fecha).utc().format("DD-MM-YYYY")}`;
       }
     },
   {
@@ -67,6 +78,7 @@ export const TicketsTable = ({pagos=false}) => {
       id: `${usuario.estudiantes[0].idEstudiante}`,
     })
     .then((response) => {
+      console.log(response.data)
       setTickets(response.data);
     })
     .catch((error) => {

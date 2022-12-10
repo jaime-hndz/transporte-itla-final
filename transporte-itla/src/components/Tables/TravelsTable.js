@@ -71,7 +71,7 @@ export const TravelsTable = () => {
   
       console.log(formValues)
       e.preventDefault()
-      await fetchApi("viajes/bydate", formValues)
+      await fetchApi(`viajes/bydate/${usuario.estudiantes[0].idEstudiante}`, formValues)
       .then(response => {
         setViajes(response.data)
       })
