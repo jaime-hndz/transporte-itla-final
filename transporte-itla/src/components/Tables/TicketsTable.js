@@ -56,7 +56,7 @@ const columns = [
   },
   {
     field: "delete",
-    headerName: "",
+    headerName: "Acciones",
     description: "¿Desea eliminar el ticket reservado?",
     sortable: false,
     renderCell: (params) => {
@@ -94,7 +94,7 @@ export const TicketsTable = ({pagos=false}) => {
   return (
     <DataTable
       rows={tickets}
-      columns={columns}
+      columns={!pagos ? columns : columns.filter(c => c.field !== 'delete')}
       footer={
         pagos ? null : <PayTickets total={total} tickets={ticketsPagar} estudiante={usuario.estudiantes[0]} />
       }

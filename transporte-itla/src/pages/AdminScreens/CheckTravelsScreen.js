@@ -15,7 +15,7 @@ export const CheckTravelsScreen = () => {
     <div>
         <PageTitle>Validando tickes del viaje no. {state.viaje.idViaje} </PageTitle>
         <div style={{display: 'flex', marginBlock: '10px'}}>
-            <Button variant='contained' startIcon={<ArrowBackIcon />} onClick={() => nav('/administrar')}>Volver</Button>
+            <Button variant='contained' style={{backgroundColor: '#0E6CB4'}}  startIcon={<ArrowBackIcon />} onClick={() => nav('/administrar')}>Volver</Button>
         </div>
         <CheckTravels viaje={state.viaje} />
     </div>

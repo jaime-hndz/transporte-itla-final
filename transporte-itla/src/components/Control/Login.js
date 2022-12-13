@@ -33,7 +33,6 @@ export const Login = () => {
       })
       .then(response => {
         cookies.set('usuario', response.data, {path: '/'})
-        alert(`Bienvenido/a ${response.data.email}`)
         window.location.href="./"
       })
       .catch((error) => {

@@ -36,9 +36,9 @@ const columns = [
     },
   },
   {
-    field: "delete",
-    headerName: "",
-    description: "¿Desea eliminar el ticket reservado?",
+    field: "actions",
+    headerName: "Acciones",
+    description: "Acciones para cada viaje",
     sortable: false,
     width: 150,
     renderCell: (params) => {

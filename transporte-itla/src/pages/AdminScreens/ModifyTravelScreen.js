@@ -15,7 +15,7 @@ export const ModifyTravelScreen = () => {
     <div>
         <PageTitle>Modificar viaje no. {state.viaje.idViaje} </PageTitle>
         <div style={{display: 'flex', marginBlock: '10px'}}>
-            <Button variant='contained' startIcon={<ArrowBackIcon />} onClick={() => nav('/administrar')}>Volver</Button>
+            <Button variant='contained' style={{backgroundColor: '#0E6CB4'}}  startIcon={<ArrowBackIcon />} onClick={() => nav('/administrar')}>Volver</Button>
         </div>
         <ModifyTravelForm viaje={state.viaje} />
     </div>

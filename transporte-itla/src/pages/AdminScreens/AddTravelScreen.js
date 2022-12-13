@@ -13,7 +13,7 @@ export const AddTravelScreen = () => {
     <div>
         <PageTitle>Agregar un viaje</PageTitle>
         <div style={{display: 'flex', marginBlock: '10px'}}>
-            <Button variant='contained' startIcon={<ArrowBackIcon />} onClick={() => nav('/administrar')}>Volver</Button>
+            <Button variant='contained' style={{backgroundColor: '#0E6CB4'}}  startIcon={<ArrowBackIcon />} onClick={() => nav('/administrar')}>Volver</Button>
         </div>
         <CreateSingleTravel />
     </div>

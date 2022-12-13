@@ -14,9 +14,9 @@ export const AdminTravelsScreen = () => {
     <div>
       <PageTitle>Administrar viajes</PageTitle>
       <div style={{display: 'flex', marginBlock: '10px'}}>
-        <Button variant='contained' endIcon={<AddBoxIcon />} onClick={() => nav('/agregarviaje')}>Agregar viaje</Button>
+        <Button style={{backgroundColor: '#0E6CB4'}} variant='contained' endIcon={<AddBoxIcon />} onClick={() => nav('/agregarviaje')}>Agregar viaje</Button>
         &nbsp;
-        <Button variant='contained' endIcon={<AddToPhotosIcon />}>Agregar viajes</Button>
+        <Button style={{backgroundColor: '#0E6CB4'}} variant='contained' endIcon={<AddToPhotosIcon />}>Agregar viajes</Button>
       </div>
       <AdminTravel />
     </div>
