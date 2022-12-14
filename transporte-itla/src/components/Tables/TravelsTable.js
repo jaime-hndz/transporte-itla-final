@@ -4,6 +4,7 @@ import { fetchApi } from "../../helpers/fetchApi.js"
 import { DataTable } from "./DataTable.js";
 import { usuario } from "../../helpers/UserProvider";
 import { FooterButton } from "../Utils/FooterButton.js";
+import { useNotification } from '../../context/notification.context';
 
 const columns = [
     {
@@ -39,7 +40,8 @@ const columns = [
   
 export const TravelsTable = () => {
 
-    const [selectionModel, setSelectionModel] = useState([]);
+  const { getNotification } = useNotification()
+  const [selectionModel, setSelectionModel] = useState([]);
     const [viajes, setViajes] =  useState([])
     const [formValues, setformValues] = useState({
       fecha: null
@@ -52,10 +54,14 @@ export const TravelsTable = () => {
             id: `${usuario.estudiantes[0].idEstudiante}`,
         }, 'POST')
         .then(response => {
-         console.log(response.data)
+          getNotification("Se han solicitado los viajes seleccionados", "success")
+          console.log(response.data)
+
         })
         .catch((error) => {
-        console.log(error);
+          getNotification("Ha ocurrido error al solicitar viajes", "error")
+          console.log(error);
+
         });
     }
 
@@ -77,6 +83,7 @@ export const TravelsTable = () => {
       })
       .catch((error) => {
         console.log(error);
+        getNotification("Ha ocurrido error al cargar viajes", "error")
       });
     }
 

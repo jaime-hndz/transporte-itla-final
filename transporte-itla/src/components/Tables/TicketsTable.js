@@ -5,6 +5,7 @@ import { DeleteTicket } from "../Control/DeleteTicket.js";
 import { PayTickets } from "../Control/PayTickets.js";
 import { usuario } from "../../helpers/UserProvider";
 import moment from "moment";
+import { useNotification } from '../../context/notification.context';
 
 const columns = [
     {
@@ -67,6 +68,7 @@ const columns = [
 
 export const TicketsTable = ({pagos=false}) => {
 
+  const { getNotification } = useNotification()
   const [selectionModel, setSelectionModel] = useState([]);
   const [total, setTotal] = useState(0);
   const [tickets, setTickets] = useState([]);
@@ -82,6 +84,7 @@ export const TicketsTable = ({pagos=false}) => {
       setTickets(response.data);
     })
     .catch((error) => {
+      getNotification("Ha ocurrido error al cargar", "error")
       console.log(error);
     });
   };

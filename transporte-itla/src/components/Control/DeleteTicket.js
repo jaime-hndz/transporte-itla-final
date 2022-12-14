@@ -12,8 +12,8 @@ export const DeleteTicket = ({id}) => {
     if (window.confirm("¿Seguro que quieres cancelar la reservación de este ticket?")) {
       await fetchApi(`tickets/${id}`, null, 'DELETE')
       .then((response) => {
-        window.location.reload()
         getNotification("Eliminado correctamente", "success")
+        window.location.reload()
       })
       .catch((error) => {
         getNotification("Ha ocurrido error", "error")

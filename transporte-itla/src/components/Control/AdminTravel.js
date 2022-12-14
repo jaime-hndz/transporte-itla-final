@@ -63,8 +63,8 @@ export const AdminTravel = () => {
     console.log(selectionModel);
     await fetchApi(`viajes/deleteviajes`, selectionModel, "DELETE")
       .then((response) => {
-        console.log(response.data);
         getNotification("Se ha eliminado correctamente", "success")
+        console.log(response.data);
       })
       .catch((error) => {
         getNotification("Ha ocurrido un error", "error")
@@ -79,8 +79,8 @@ export const AdminTravel = () => {
         setViajes(response.data);
       })
       .catch((error) => {
-        console.log(error);
         getNotification("Ha ocurrido un error al cargar los viajes", "error")
+        console.log(error);
       });
   };
   return (

@@ -23,8 +23,8 @@ export const CheckTravels = ({viaje}) => {
       setAprove(response.data)
     })
     .catch((error) => {
-      console.log(error);
       getNotification("Ha ocurrido error", "error")
+      console.log(error);
     })
   }
 

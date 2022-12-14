@@ -25,15 +25,15 @@ export const Balance = () => {
     /* - LOGICA DE RECARGAR - */
     await fetchApi(`estudiantes/recargar/${usuario.estudiantes[0].idEstudiante}/${valor}`,null,'PUT')
     .then((response) => {
-        console.log(response)
-        usuario.estudiantes[0].saldo = usuario.estudiantes[0].saldo + valor
-        cookies.remove('usuario', {path: '/'})
-        cookies.set('usuario', usuario, {path: '/'})
-        window.location.reload()
+      console.log(response)
+      usuario.estudiantes[0].saldo = usuario.estudiantes[0].saldo + valor
+      cookies.remove('usuario', {path: '/'})
+      cookies.set('usuario', usuario, {path: '/'})
+      window.location.reload()
     })
     .catch((error) => {
       getNotification("Ha ocurrido error al recargar", "error")
-    console.log(error);
+      console.log(error);
     })
 
 

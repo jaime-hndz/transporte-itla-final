@@ -27,8 +27,8 @@ export const ModifyTravelForm = ({viaje}) => {
   const Submit = async () => {
     await fetchApi(`viajes/${formValues.idViaje}`, formValues, 'PUT')
     .then((response) => {
-      console.log(response)
       getNotification("Modificado correctamente", "success")
+      console.log(response)
         
     })
     .catch((error) => {

@@ -27,19 +27,19 @@ export const CreateSingleTravel = () => {
   const Submit = async () => {
     await fetchApi(`viajes`, formValues, 'POST')
     .then((response) => {
-        console.log(response)
-        setformValues({
-          idViaje: 0,
-          idRuta: '',
-          idHorario: '',
-          idCantidadCupos: ''
-        })
-        getNotification("Agregado correctamente", "success")
+      getNotification("Agregado correctamente", "success")
+      console.log(response)
+      setformValues({
+        idViaje: 0,
+        idRuta: '',
+        idHorario: '',
+        idCantidadCupos: ''
+      })
         
     })
     .catch((error) => {
-      console.log(error);
       getNotification("Ha ocurrido error", "error")
+      console.log(error);
     })
   }
 
