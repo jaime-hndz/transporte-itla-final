@@ -13,7 +13,6 @@ export const ModifyTravelForm = ({viaje}) => {
   const [formValues, setformValues] = useState(viaje);
   const { getNotification } = useNotification()
 
-  console.clear()
   console.log(viaje)
 
   const handleChange = async (e) => {
@@ -42,7 +41,7 @@ export const ModifyTravelForm = ({viaje}) => {
       <FormControl fullWidth style={{marginBlock: '10px'}} size="small" >    
         <InputLabel id="ruta-label">Ruta</InputLabel>
         <Select
-          labelId="ruta-label"
+          labelid="ruta-label"
           id="idruta"
           value={formValues.idRuta}
           label="Ruta"
@@ -61,7 +60,7 @@ export const ModifyTravelForm = ({viaje}) => {
       <FormControl fullWidth style={{marginBlock: '10px'}} size="small">
         <InputLabel id="horario-label">Horario</InputLabel>
         <Select
-          labelId="horario-label"
+          labelid="horario-label"
           id="idhorario"
           value={formValues.idHorario}
           label="Horario"
@@ -84,7 +83,7 @@ export const ModifyTravelForm = ({viaje}) => {
       <FormControl fullWidth style={{marginBlock: '10px'}} size="small">
         <InputLabel id="cantidad-label">Cantidad de cupos</InputLabel>
         <Select
-          labelId="cantidad-label"
+          labelid="cantidad-label"
           id="idcantidad"
           value={formValues.idCantidadCupos}
           label="Cantidad de cupos"
@@ -96,7 +95,7 @@ export const ModifyTravelForm = ({viaje}) => {
       </FormControl>
 
       <FormControl fullWidth style={{marginBlock: '10px'}}>
-        <Input defaultValue={moment(formValues.fecha).utc().format("yyyy-MM-DD")} labelId='fecha-label' type="date" onChange={handleChange} required name="fecha" />
+        <Input defaultValue={moment(formValues.fecha).utc().format("yyyy-MM-DD")} labelid='fecha-label' type="date" onChange={handleChange} required name="fecha" />
       </FormControl>
 
       <FormControl fullWidth style={{marginBlock: '10px'}}>

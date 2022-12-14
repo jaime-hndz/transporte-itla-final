@@ -1,12 +1,12 @@
 import { DataGrid } from '@mui/x-data-grid';
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 
 
 export const DataTable = ({rows, columns, footer,rowId, seleccion, setSeleccion}) => {
 
-  useEffect(() => {
-    console.log(seleccion)
-  }, [seleccion])
+  // useEffect(() => {
+  //   console.log(seleccion)
+  // }, [seleccion])
   
 
   return (

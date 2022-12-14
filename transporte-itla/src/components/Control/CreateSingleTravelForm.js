@@ -8,7 +8,7 @@ import { Button } from '@mui/material';
 import { fetchApi } from "../../helpers/fetchApi";
 import { useNotification } from '../../context/notification.context';
 
-export const CreateSingleTravel = () => {
+export const CreateSingleTravelForm = () => {
 
   const { getNotification } = useNotification()
 
@@ -48,9 +48,9 @@ export const CreateSingleTravel = () => {
       <FormControl fullWidth style={{marginBlock: '10px'}} size="small" >    
         <InputLabel id="ruta-label">Ruta</InputLabel>
         <Select
-          labelId="ruta-label"
+          labelid="ruta-label"
           id="idruta"
-          value={formValues.idRuta}
+          defaultValue=""
           label="Ruta"
           name="idRuta"
           onChange={e => handleChange(e)}
@@ -67,9 +67,9 @@ export const CreateSingleTravel = () => {
       <FormControl fullWidth style={{marginBlock: '10px'}} size="small">
         <InputLabel id="horario-label">Horario</InputLabel>
         <Select
-          labelId="horario-label"
+          labelid="horario-label"
           id="idhorario"
-          value={formValues.idHorario}
+          defaultValue=""
           label="Horario"
           name="idHorario"
           onChange={e => handleChange(e)}
@@ -90,9 +90,9 @@ export const CreateSingleTravel = () => {
       <FormControl fullWidth style={{marginBlock: '10px'}} size="small">
         <InputLabel id="cantidad-label">Cantidad de cupos</InputLabel>
         <Select
-          labelId="cantidad-label"
+          labelid="cantidad-label"
           id="idcantidad"
-          value={formValues.idCantidadCupos}
+          defaultValue=""
           label="Cantidad de cupos"
           name="idCantidadCupos"
           onChange={e => handleChange(e)}
@@ -102,7 +102,7 @@ export const CreateSingleTravel = () => {
       </FormControl>
 
       <FormControl fullWidth style={{marginBlock: '10px'}}>
-        <Input labelId='fecha-label' type="date" onChange={handleChange} required name="fecha" />
+        <Input labelid='fecha-label' type="date" onChange={handleChange} required name="fecha" />
       </FormControl>
 
       <FormControl fullWidth style={{marginBlock: '10px'}}>

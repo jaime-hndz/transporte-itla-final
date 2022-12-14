@@ -1,5 +1,5 @@
 import React from 'react'
-import { CreateSingleTravel } from '../../components/Control/CreateSingleTravel'
+import { CreateSingleTravelForm } from '../../components/Control/CreateSingleTravelForm'
 import { PageTitle } from '../../components/Utils/PageTitle'
 import { NavToHome } from '../../components/Utils/NavTo/NavToHome';
 
@@ -10,7 +10,7 @@ export const AddTravelScreen = () => {
     <div>
       <PageTitle>Agregar un viaje</PageTitle>
       <NavToHome />
-      <CreateSingleTravel />
+      <CreateSingleTravelForm />
     </div>
   )
 }
