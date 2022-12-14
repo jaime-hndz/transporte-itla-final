@@ -4,6 +4,7 @@ import Cookies from "universal-cookie";
 import { usuario } from "../../helpers/UserProvider";
 import { fetchApi } from "../../helpers/fetchApi";
 import { useNotification } from '../../context/notification.context';
+import { useNavigate } from "react-router-dom";
 
 const cookies = new Cookies();
 
@@ -11,6 +12,7 @@ export const Balance = () => {
 
   const [saldo, setSaldo] = useState(0)
   const { getNotification } = useNotification()
+  const navigate = useNavigate();
 
   useEffect(() => {
     setSaldo(usuario.estudiantes[0].saldo)
@@ -29,7 +31,7 @@ export const Balance = () => {
       usuario.estudiantes[0].saldo = usuario.estudiantes[0].saldo + valor
       cookies.remove('usuario', {path: '/'})
       cookies.set('usuario', usuario, {path: '/'})
-      window.location.reload()
+      navigate(0)
     })
     .catch((error) => {
       getNotification("Ha ocurrido error al recargar", "error")
