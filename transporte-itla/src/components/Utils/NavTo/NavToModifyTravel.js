@@ -2,7 +2,7 @@ import { IconButton } from '@mui/material'
 import EditRoadIcon from '@mui/icons-material/EditRoad';
 import { useNavigate } from "react-router-dom";
 
-export const ModifyTravel = ({viaje}) => {
+export const NavToModifyTravel = ({viaje}) => {
   let nav = useNavigate()
   const modifyTravel = async () =>{
     nav('/modificarviaje', { state: { viaje: viaje } })

@@ -1,13 +1,13 @@
 import React from 'react'
-import { CheckT } from '../Control/CheckT'
+import { NavToCheck } from './NavTo/NavToCheck'
 import { DeleteTravel } from '../Control/DeleteTravel'
-import { ModifyTravel } from '../Control/ModifyTravel'
+import { NavToModifyTravel } from './NavTo/NavToModifyTravel'
 export const Actions = ({viaje}) => {
   return (
     <div>
-      <ModifyTravel viaje={viaje} />
+      <NavToModifyTravel viaje={viaje} />
       <DeleteTravel id={viaje.idViaje} />
-      <CheckT viaje={viaje} />
+      <NavToCheck viaje={viaje} />
     </div>
   )
 }
