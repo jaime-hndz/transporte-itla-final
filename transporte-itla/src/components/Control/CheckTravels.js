@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import { QrReader } from 'react-qr-reader';
 import {fetchApi} from '../../helpers/fetchApi'
 import { StateCheking } from '../Utils/StateCheking';
+import { useNotification } from '../../context/notification.context';
 
 export const CheckTravels = ({viaje}) => {
 
   const [aprove, setAprove] = useState(null);
 
+  const { getNotification } = useNotification()
 
   
   const previewStyle = {
@@ -21,7 +23,8 @@ export const CheckTravels = ({viaje}) => {
       setAprove(response.data)
     })
     .catch((error) => {
-    console.log(error);
+      console.log(error);
+      getNotification("Ha ocurrido error", "error")
     })
   }
 

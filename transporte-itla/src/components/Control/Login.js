@@ -6,10 +6,13 @@ import {fetchApi} from '../../helpers/fetchApi'
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import { Lock } from '@mui/icons-material';
 import { InputCustom } from '../Utils/InputCustom';
+import { useNotification } from '../../context/notification.context';
 
 const cookies = new Cookies();
 
 export const Login = () => {
+
+  const { getNotification } = useNotification()
  
   const [formValues, setformValues] = useState({
     user: '',
@@ -36,6 +39,7 @@ export const Login = () => {
         window.location.href="./"
       })
       .catch((error) => {
+        getNotification("Ha ocurrido error con el inicio de sesión", "error")
         console.log(error);
       });
   }

@@ -4,11 +4,13 @@ import { useNavigate } from "react-router-dom";
 import Cookies from "universal-cookie";
 import { usuario } from "../../helpers/UserProvider";
 import { FooterButton } from "../Utils/FooterButton";
+import { useNotification } from '../../context/notification.context';
 
 const cookies = new Cookies();
 
 export const PayTickets = ({ total, tickets, estudiante }) => {
 
+  const { getNotification } = useNotification()
   let nav = useNavigate()
   const Pagar = async () =>{
     if(estudiante.saldo < total){
@@ -30,7 +32,8 @@ export const PayTickets = ({ total, tickets, estudiante }) => {
             cookies.set('usuario', usuario, {path: '/'})
         })
         .catch((error) => {
-        console.log(error);
+          getNotification("Ha ocurrido error", "error")
+          console.log(error);
         })
     }
 

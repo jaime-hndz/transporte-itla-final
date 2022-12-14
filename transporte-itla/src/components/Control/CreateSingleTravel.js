@@ -6,8 +6,12 @@ import FormControl from "@mui/material/FormControl";
 import Box from "@mui/material/Box";
 import { Button } from '@mui/material';
 import { fetchApi } from "../../helpers/fetchApi";
+import { useNotification } from '../../context/notification.context';
 
 export const CreateSingleTravel = () => {
+
+  const { getNotification } = useNotification()
+
   const [formValues, setformValues] = useState({
     idViaje: 0
   });
@@ -30,10 +34,12 @@ export const CreateSingleTravel = () => {
           idHorario: '',
           idCantidadCupos: ''
         })
+        getNotification("Agregado correctamente", "success")
         
     })
     .catch((error) => {
-    console.log(error);
+      console.log(error);
+      getNotification("Ha ocurrido error", "error")
     })
   }
 

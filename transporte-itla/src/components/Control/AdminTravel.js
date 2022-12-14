@@ -4,6 +4,7 @@ import { DataTable } from "../Tables/DataTable";
 import { FooterButton } from "../Utils/FooterButton";
 import moment from "moment";
 import { Actions } from "../Utils/Actions.js";
+import { useNotification } from '../../context/notification.context';
 
 const columns = [
   {
@@ -51,8 +52,11 @@ export const AdminTravel = () => {
   const [selectionModel, setSelectionModel] = useState([]);
   const [viajes, setViajes] = useState([]);
 
+  const { getNotification } = useNotification()
+
   useEffect(() => {
     handleLoad();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const EliminarViajes = async () => {
@@ -60,8 +64,10 @@ export const AdminTravel = () => {
     await fetchApi(`viajes/deleteviajes`, selectionModel, "DELETE")
       .then((response) => {
         console.log(response.data);
+        getNotification("Se ha eliminado correctamente", "success")
       })
       .catch((error) => {
+        getNotification("Ha ocurrido un error", "error")
         console.log(error);
       });
   };
@@ -74,6 +80,7 @@ export const AdminTravel = () => {
       })
       .catch((error) => {
         console.log(error);
+        getNotification("Ha ocurrido un error al cargar los viajes", "error")
       });
   };
   return (

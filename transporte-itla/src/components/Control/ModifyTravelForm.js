@@ -7,9 +7,11 @@ import Box from "@mui/material/Box";
 import { Button } from '@mui/material';
 import { fetchApi } from "../../helpers/fetchApi";
 import moment from "moment";
+import { useNotification } from '../../context/notification.context';
 
 export const ModifyTravelForm = ({viaje}) => {
   const [formValues, setformValues] = useState(viaje);
+  const { getNotification } = useNotification()
 
   console.clear()
   console.log(viaje)
@@ -26,10 +28,12 @@ export const ModifyTravelForm = ({viaje}) => {
     await fetchApi(`viajes/${formValues.idViaje}`, formValues, 'PUT')
     .then((response) => {
       console.log(response)
+      getNotification("Modificado correctamente", "success")
         
     })
     .catch((error) => {
-    console.log(error);
+      getNotification("Ha ocurrido error", "error")
+      console.log(error);
     })
   }
 

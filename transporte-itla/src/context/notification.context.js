@@ -9,7 +9,7 @@ export const NotificationProvider = ({children}) => {
     const [open, setOpen] = React.useState(false);
     const [severity, setSeverity] = React.useState(undefined);
 
-    const getError = (msg,severity) => {
+    const getNotification = (msg,severity) => {
         setSeverity(severity);
         setOpen(true);
         setMsg(msg);
@@ -20,7 +20,7 @@ export const NotificationProvider = ({children}) => {
     }
 
     const value = {
-        getError,
+      getNotification,
     }
     return (
       <NotificationContext.Provider value={value}>

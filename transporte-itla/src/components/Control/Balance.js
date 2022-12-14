@@ -3,12 +3,14 @@ import { Button } from '@mui/material';
 import Cookies from "universal-cookie";
 import { usuario } from "../../helpers/UserProvider";
 import { fetchApi } from "../../helpers/fetchApi";
+import { useNotification } from '../../context/notification.context';
 
 const cookies = new Cookies();
 
 export const Balance = () => {
 
   const [saldo, setSaldo] = useState(0)
+  const { getNotification } = useNotification()
 
   useEffect(() => {
     setSaldo(usuario.estudiantes[0].saldo)
@@ -16,6 +18,7 @@ export const Balance = () => {
   
 
   const Recargar = async () =>{
+    
     
     const valor = 25
     console.log(usuario.estudiantes[0])
@@ -29,6 +32,7 @@ export const Balance = () => {
         window.location.reload()
     })
     .catch((error) => {
+      getNotification("Ha ocurrido error al recargar", "error")
     console.log(error);
     })
 
