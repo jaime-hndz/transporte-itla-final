@@ -75,7 +75,6 @@ export const AdminTravelTable = () => {
   const handleLoad = async () => {
     await fetchApi("viajes")
       .then((response) => {
-        console.log(response.data);
         setViajes(response.data);
       })
       .catch((error) => {
