@@ -13,6 +13,7 @@ import LogoutIcon from "@mui/icons-material/Logout";
 import { Logo } from './Logo';
 import { Link } from 'react-router-dom';
 import Cookies from "universal-cookie";
+import { InformationOptions } from '../../../data/NavbarOptionsData';
 
 
 const cookies = new Cookies();
@@ -65,6 +66,19 @@ export const SideBar = ({options}) => {
         ))}
       </List>
       <Divider />
+      {InformationOptions.map((opt, i) => (
+          <Link key={i} to={opt.path}>
+            <ListItem disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                  {opt.icon}
+                </ListItemIcon>
+                <ListItemText primary={opt.text} />
+              </ListItemButton>
+            </ListItem>
+          </Link>
+
+        ))}
       <ListItem disablePadding>
         <ListItemButton onClick={LoggingOut}>
           <ListItemIcon>

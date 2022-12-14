@@ -19,6 +19,9 @@ import { ModifyTravelScreen } from "../pages/AdminScreens/ModifyTravelScreen";
 import { CheckTravelsScreen } from "../pages/AdminScreens/CheckTravelsScreen";
 import { Navigate } from "react-router-dom";
 import { NotFoundScreen } from "../pages/NotFoundScreen";
+import {AboutScreen} from "../pages/InformationScreens/AboutScreen";
+import {HelpScreen} from "../pages/InformationScreens/HelpScreen";
+
 
 const PrivateRoutes = () => {
   useEffect(() => {
@@ -56,6 +59,8 @@ const PrivateRoutes = () => {
                     <Route path="/rutas" element={<RoutesMapScreen />} />
                   </>
                 )}
+                <Route path="/acercade" element={<AboutScreen />} />
+                <Route path="/ayuda" element={<HelpScreen />} />
                 <Route path='*' element={<NotFoundScreen />} />
               </Routes>
             </Paper>

@@ -7,6 +7,8 @@ import PaidIcon from '@mui/icons-material/Paid';
 import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
 import MapIcon from '@mui/icons-material/Map';
 import AddBoxIcon from '@mui/icons-material/AddBox';
+import InfoIcon from '@mui/icons-material/Info';
+import HelpIcon from '@mui/icons-material/Help';
 
 export const StudentOptions = [
     {
@@ -83,4 +85,21 @@ export const AdminOptions = [
 
     },
   
+]
+
+export const InformationOptions = [
+    {
+        text: 'Ayuda',
+        path: '/ayuda',
+        icon: <HelpIcon />,
+        important: false
+
+    },
+    {
+        text: 'Acerca de',
+        path: '/acercade',
+        icon: <InfoIcon />,
+        important: false
+
+    }  
 ]
