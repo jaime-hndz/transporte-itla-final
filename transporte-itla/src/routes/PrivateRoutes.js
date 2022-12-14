@@ -4,7 +4,7 @@ import { Footer } from "../components/Layout/Footer/Footer";
 import { Header } from "../components/Layout/Header/Header";
 import { Paper } from "@mui/material";
 // import { Container } from "@mui/system";
-import {RequestsScreen} from "../pages/StudentScreens/RequestsScreen";
+import { RequestsScreen } from "../pages/StudentScreens/RequestsScreen";
 import { PaymentMethodsScreen } from "../pages/InformationScreens/PaymentMethodsScreen";
 import { ScheduleScreen } from "../pages/InformationScreens/ScheduleScreen";
 import { useEffect } from "react";
@@ -17,44 +17,52 @@ import { RoutesMapScreen } from "../pages/InformationScreens/RoutesMapScreen";
 import { AddTravelScreen } from "../pages/AdminScreens/AddTravelScreen";
 import { ModifyTravelScreen } from "../pages/AdminScreens/ModifyTravelScreen";
 import { CheckTravelsScreen } from "../pages/AdminScreens/CheckTravelsScreen";
+import { Navigate } from "react-router-dom";
+import { NotFoundScreen } from "../pages/NotFoundScreen";
 
 const PrivateRoutes = () => {
-
   useEffect(() => {
     if (!usuario) {
-      window.location.href="./login"
+      window.location.href = "./login";
     }
-  }, [])
+  }, []);
 
-  return (
+  return !usuario ? (
+    <Navigate to="/login" />
+  ) : (
     <>
       <Header />
-      <div className='allContainer'>
-        <div style={{padding: "60px"}}>
-          <div style={{paddingInline: '24px'}}>
-            <Paper
-              elevation={2}
-              style={{ padding: "40px"}}
-            >
+      <div className="allContainer">
+        <div style={{ padding: "60px" }}>
+          <div style={{ paddingInline: "24px" }}>
+            <Paper elevation={2} style={{ padding: "40px" }}>
               <Routes>
-                <Route path="/" element={usuario.idTipo === 1 ? <StudentHomeScreen /> : <AdminHomeScreen />} />
-                <Route path="/solicitudes" element={<RequestsScreen />} />
-                <Route path="/tickets" element={<PaidTicketsScreen />} />
-                <Route path="/formas" element={<PaymentMethodsScreen />} />
-                <Route path="/horarios" element={<ScheduleScreen />} />
-                <Route path="/administrar" element={<AdminTravelsScreen />} />
-                <Route path="/saldo" element={<BalanceScreen />} />
-                <Route path="/rutas" element={<RoutesMapScreen />} />
-                <Route path="/agregarviaje" element={<AddTravelScreen />} />
-                <Route path="/modificarviaje" element={<ModifyTravelScreen />} />
-                <Route path="/checkviaje" element={<CheckTravelsScreen />} />
+                {usuario.idTipo === 2 ? (
+                  <>
+                    <Route path="/" element={<AdminHomeScreen />} />
+                    <Route path="/administrar" element={<AdminTravelsScreen />} />
+                    <Route path="/agregarviaje" element={<AddTravelScreen />} />
+                    <Route path="/modificarviaje" element={<ModifyTravelScreen />} />
+                    <Route path="/checkviaje" element={<CheckTravelsScreen />} />
+                  </>
+                ) : (
+                  <>
+                    <Route path="/" element={<StudentHomeScreen />} />
+                    <Route path="/solicitudes" element={<RequestsScreen />} />
+                    <Route path="/tickets" element={<PaidTicketsScreen />} />
+                    <Route path="/formas" element={<PaymentMethodsScreen />} />
+                    <Route path="/horarios" element={<ScheduleScreen />} />
+                    <Route path="/saldo" element={<BalanceScreen />} />
+                    <Route path="/rutas" element={<RoutesMapScreen />} />
+                  </>
+                )}
+                <Route path='*' element={<NotFoundScreen />} />
               </Routes>
             </Paper>
           </div>
         </div>
         <Footer />
       </div>
-
     </>
   );
 };
