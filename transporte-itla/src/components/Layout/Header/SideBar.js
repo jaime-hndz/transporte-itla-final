@@ -14,6 +14,7 @@ import { Logo } from './Logo';
 import { Link } from 'react-router-dom';
 import Cookies from "universal-cookie";
 import { InformationOptions } from '../../../data/NavbarOptionsData';
+import { Tooltip } from '@mui/material';
 
 
 const cookies = new Cookies();
@@ -93,16 +94,18 @@ export const SideBar = ({options}) => {
   return (
     <div>
         <React.Fragment key={'left'}>
-        <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            onClick={toggleDrawer('left', true)}
-            sx={{ mr: 2 }}
-          >
-            <MenuIcon />
-          </IconButton>
+          <Tooltip title='Opciones'>
+            <IconButton
+              size="large"
+              edge="start"
+              color="inherit"
+              aria-label="menu"
+              onClick={toggleDrawer('left', true)}
+              sx={{ mr: 2 }}
+              >
+              <MenuIcon />
+            </IconButton>
+          </Tooltip>
           <Drawer
             anchor={'left'}
             open={state['left']}

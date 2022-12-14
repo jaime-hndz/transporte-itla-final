@@ -8,6 +8,7 @@ import Menu from "@mui/material/Menu";
 import { Balance } from "./Balance.js";
 import { usuario as User } from "../../../helpers/UserProvider.js";
 import { useNavigate } from "react-router-dom";
+import { Tooltip } from "@mui/material";
 
 const cookies = new Cookies();
 
@@ -37,16 +38,18 @@ export const LogOut = ({ usuario }) => {
   return (
     <>
       <div>
-        <IconButton
-          size="large"
-          aria-label="account of current user"
-          aria-controls="menu-appbar"
-          aria-haspopup="true"
-          onClick={handleMenu}
-          color="inherit"
-        >
-          <AccountCircle />
-        </IconButton>
+        <Tooltip title='usuario'>
+          <IconButton
+            size="large"
+            aria-label="account of current user"
+            aria-controls="menu-appbar"
+            aria-haspopup="true"
+            onClick={handleMenu}
+            color="inherit"
+          >
+            <AccountCircle />
+          </IconButton>
+        </Tooltip>
         <Menu
           anchorEl={anchorEl}
           // anchorOrigin={{
