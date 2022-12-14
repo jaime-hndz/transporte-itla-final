@@ -1,23 +1,19 @@
 import React from 'react'
 import { PageTitle } from '../../components/Utils/PageTitle'
-import { useLocation, useNavigate } from "react-router-dom";
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import { Button } from '@mui/material';
+import { useLocation } from "react-router-dom";
 import { ModifyTravelForm } from '../../components/Control/ModifyTravelForm';
+import { NavToHome } from '../../components/Utils/NavTo/NavToHome';
 
 
 export const ModifyTravelScreen = () => {
 
   const { state } = useLocation();
 
-  let nav = useNavigate()
   return (
     <div>
-        <PageTitle>Modificar viaje no. {state.viaje.idViaje} </PageTitle>
-        <div style={{display: 'flex', marginBlock: '10px'}}>
-            <Button variant='contained' style={{backgroundColor: '#0E6CB4'}}  startIcon={<ArrowBackIcon />} onClick={() => nav('/administrar')}>Volver</Button>
-        </div>
-        <ModifyTravelForm viaje={state.viaje} />
+      <PageTitle>Modificar viaje no. {state.viaje.idViaje} </PageTitle>
+      <NavToHome />
+      <ModifyTravelForm viaje={state.viaje} />
     </div>
   )
 }
