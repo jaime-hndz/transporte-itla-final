@@ -9,7 +9,6 @@ import { PaymentMethodsScreen } from "../pages/InformationScreens/PaymentMethods
 import { ScheduleScreen } from "../pages/InformationScreens/ScheduleScreen";
 import { useEffect } from "react";
 import { AdminHomeScreen } from "../pages/AdminScreens/AdminHomeScreen";
-import { AdminTravelsScreen } from "../pages/AdminScreens/AdminTravelsScreen";
 import { PaidTicketsScreen } from "../pages/StudentScreens/PaidTicketsScreen";
 import { BalanceScreen } from "../pages/StudentScreens/BalanceScreen";
 import { usuario } from "../helpers/UserProvider";
@@ -43,7 +42,6 @@ const PrivateRoutes = () => {
                 {usuario.idTipo === 2 ? (
                   <>
                     <Route path="/" element={<AdminHomeScreen />} />
-                    <Route path="/administrar" element={<AdminTravelsScreen />} />
                     <Route path="/agregarviaje" element={<AddTravelScreen />} />
                     <Route path="/modificarviaje" element={<ModifyTravelScreen />} />
                     <Route path="/checkviaje" element={<CheckTravelsScreen />} />

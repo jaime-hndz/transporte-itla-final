@@ -66,13 +66,6 @@ export const AdminOptions = [
     {
         text: 'Inicio',
         path: '/',
-        icon: <HomeIcon />,
-        important: true
-
-    },
-    {
-        text: 'Administrar viajes',
-        path: '/administrar',
         icon: <AdminPanelSettingsIcon />,
         important: true
 
@@ -81,7 +74,7 @@ export const AdminOptions = [
         text: 'Agregar viaje',
         path: '/agregarviaje',
         icon: <AddBoxIcon />,
-        important: false
+        important: true
 
     },
   

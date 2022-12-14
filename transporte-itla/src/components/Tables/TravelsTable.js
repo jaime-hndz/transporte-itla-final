@@ -89,7 +89,6 @@ export const TravelsTable = () => {
 
   return (
     <>
-      <h2>Viajes disponibles</h2>
       <form onSubmit={handleSubmit}>
         <div className="inputTravelsTable">
           <div>

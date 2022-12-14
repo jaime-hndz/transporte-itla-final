@@ -5,7 +5,7 @@ import { PageTitle } from '../../components/Utils/PageTitle';
 export const StudentHomeScreen = () => {
   return (
     <>
-      <PageTitle>Inicio estudiante</PageTitle>
+      <PageTitle>Viajes disponibles</PageTitle>
       <TravelsTable />
     </>
   )
