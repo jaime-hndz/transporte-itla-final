@@ -1,6 +1,6 @@
 import React from 'react'
 import { PageTitle } from '../../components/Utils/PageTitle';
-import { AdminTravel } from '../../components/Control/AdminTravel';
+import { AdminTravelTable } from '../../components/Tables/AdminTravelTable';
 import AddBoxIcon from '@mui/icons-material/AddBox';
 import AddToPhotosIcon from '@mui/icons-material/AddToPhotos';
 import { Button } from '@mui/material';
@@ -18,7 +18,7 @@ export const AdminTravelsScreen = () => {
         &nbsp;
         <Button style={{backgroundColor: '#0E6CB4'}} variant='contained' endIcon={<AddToPhotosIcon />}>Agregar viajes</Button>
       </div>
-      <AdminTravel />
+      <AdminTravelTable />
     </div>
   )
 }

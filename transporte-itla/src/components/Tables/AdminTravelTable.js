@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { fetchApi } from "../../helpers/fetchApi.js";
-import { DataTable } from "../Tables/DataTable";
+import { DataTable } from "./DataTable";
 import { FooterButton } from "../Utils/FooterButton";
 import moment from "moment";
 import { Actions } from "../Utils/Actions.js";
@@ -48,7 +48,7 @@ const columns = [
   }
 ];
 
-export const AdminTravel = () => {
+export const AdminTravelTable = () => {
   const [selectionModel, setSelectionModel] = useState([]);
   const [viajes, setViajes] = useState([]);
 
