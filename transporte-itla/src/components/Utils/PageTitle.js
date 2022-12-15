@@ -3,11 +3,9 @@ export const PageTitle = ({ children, azul = false, escala = 2 }) => {
     <div
       style={{
         fontSize: `${escala}em`,
-        color: azul ? "#0E6CB4" : "black",
-        fontWeight: "bold",
-        marginBlockStart: "0.67em",
-        marginBlockEnd: "0.67em",
+        color: azul ? "#0E6CB4" : "black"
       }}
+      className='page-title'
     >
       {children}
 

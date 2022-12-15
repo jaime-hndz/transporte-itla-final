@@ -11,7 +11,7 @@ export const Navbar = ({options}) => {
         {options.map((opt) => (
           <Link key={opt.text} to={opt.path}>
             <MenuItem >
-              <Typography textAlign="center" style={{color: '#0E6CB4', fontWeight: 'bold'}}>{opt.text}</Typography>
+              <Typography className='navbar-typography'>{opt.text}</Typography>
             </MenuItem>
           </Link>
         ))}

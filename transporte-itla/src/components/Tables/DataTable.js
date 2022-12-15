@@ -10,7 +10,7 @@ export const DataTable = ({rows, columns, footer,rowId, seleccion, setSeleccion}
   
 
   return (
-    <div style={{ height: 400, width: '100%' }}>
+    <div className='datatable-div'>
       <DataGrid
         rows={rows}
         getRowId={(row) => row[rowId]}

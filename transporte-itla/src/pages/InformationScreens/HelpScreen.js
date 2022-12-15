@@ -7,7 +7,7 @@ export const HelpScreen = () => {
     <div>
       <PageTitle>Ayuda</PageTitle>
       <h2>Recorrido por la plataforma de ITLA transporte:</h2>
-      <div style={{width: 'fit-content', marginInline: 'auto', marginBlock:'40px'}}>
+      <div className='video-div mi-auto'>
       <iframe
         width="853"
         height="480"

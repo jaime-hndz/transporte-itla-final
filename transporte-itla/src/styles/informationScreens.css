@@ -1,0 +1,20 @@
+.about-container{
+    max-width: 800px;
+    padding: 10px;
+    /* style={{display:'flex',marginInline: 'auto', maxWidth: '800px', padding:'10px'}} */
+}
+
+.about-logo{
+    width: 600px;
+}
+
+.about-profile{
+    width: 200px;
+    border-radius: 50%;
+
+}
+
+.video-div{
+    width: fit-content;
+    margin-block: 40px;
+}

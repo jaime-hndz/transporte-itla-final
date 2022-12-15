@@ -8,10 +8,10 @@ export const AboutScreen = () => {
   return (
     <div>
       <PageTitle>Acerca de</PageTitle>
-      <Paper style={{display:'flex',marginInline: 'auto', maxWidth: '800px', padding:'10px'}}>
+      <Paper className='about-container flx mi-auto'>
         <div>
           <div>
-            <img src={logo} alt="logo" style={{width: '600px'}} />
+            <img src={logo} alt="logo" className='about-logo' />
           </div>
           <div style={{marginLeft: '30px'}}>
             <h2>Sistema de transporte ITLA</h2>
@@ -22,7 +22,7 @@ export const AboutScreen = () => {
         </div>
         <div>
           <div>
-            <img src={jaime} alt="logo" style={{width: '200px', borderRadius: '50%'}} />
+            <img src={jaime} alt="profile" className='about-profile' />
           </div>
           <div>
             <h4>Realizado por:</h4>

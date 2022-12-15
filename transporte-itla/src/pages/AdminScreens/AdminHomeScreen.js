@@ -9,7 +9,7 @@ export const AdminHomeScreen = () => {
   return (
     <div>
       <PageTitle>Administrar viajes</PageTitle>
-      <div style={{display: 'flex', marginBlock: '10px'}}>
+      <div className='flx mb10'>
         <NavTo icon={<AddBoxIcon />} to={'/agregarviaje'} text='Agregar viaje' />
         &nbsp;
         <NavTo icon={<AddToPhotosIcon />} to={''} text='Agregar viajes' />

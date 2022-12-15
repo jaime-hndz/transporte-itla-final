@@ -4,12 +4,11 @@ import MoodBadIcon from '@mui/icons-material/MoodBad';
 
 export const StateCheking = ({state}) => {
   return (
-    <div style={{marginInline: 'auto'}}>
-        <p>Estado:</p>
-        {state === null ? <CircularProgress />: null}
-        {state === true ? <MoodIcon fontSize='large' color='success' />: null}
-        {state === false ? <MoodBadIcon fontSize='large' color='error' />: null}
-
+    <div className='mi-auto'>
+      <p>Estado:</p>
+      {state === null ? <CircularProgress />: null}
+      {state === true ? <MoodIcon fontSize='large' color='success' />: null}
+      {state === false ? <MoodBadIcon fontSize='large' color='error' />: null}
     </div>
   )
 }

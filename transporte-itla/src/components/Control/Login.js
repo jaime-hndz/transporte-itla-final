@@ -67,7 +67,7 @@ export const Login = () => {
         handler={handleChange}
       />
 
-      <div style={{ marginBottom: "20px", textAlign: "right" }}>
+      <div className='login-btn-container'>
         <Button type="submit" variant="contained" size="large">
           Entrar
         </Button>

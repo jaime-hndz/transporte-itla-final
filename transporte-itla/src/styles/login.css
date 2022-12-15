@@ -8,9 +8,6 @@ body{
     width: fit-content;
 }
 
-.container-login {
-    /* background-color: red; */
-}
 
 .box-login {
     margin-top: 90px;
@@ -18,6 +15,12 @@ body{
     width: 500px;
 
 }
+
+.login-btn-container {
+    margin-bottom: 20px;
+    text-align: right;
+}
+
 .recordar-links{
     text-align: right;
     margin-bottom: 20px;

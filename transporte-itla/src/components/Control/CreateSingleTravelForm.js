@@ -45,7 +45,7 @@ export const CreateSingleTravelForm = () => {
 
   return (
     <Box sx={{ minWidth: 120, marginBlock: 3 }}>
-      <FormControl fullWidth style={{marginBlock: '10px'}} size="small" >    
+      <FormControl fullWidth className='form-control-m' size="small" >    
         <InputLabel id="ruta-label">Ruta</InputLabel>
         <Select
           labelid="ruta-label"
@@ -64,7 +64,7 @@ export const CreateSingleTravelForm = () => {
         </Select>
       </FormControl>
 
-      <FormControl fullWidth style={{marginBlock: '10px'}} size="small">
+      <FormControl fullWidth className='form-control-m' size="small">
         <InputLabel id="horario-label">Horario</InputLabel>
         <Select
           labelid="horario-label"
@@ -87,7 +87,7 @@ export const CreateSingleTravelForm = () => {
         </Select>
       </FormControl>
 
-      <FormControl fullWidth style={{marginBlock: '10px'}} size="small">
+      <FormControl fullWidth className='form-control-m' size="small">
         <InputLabel id="cantidad-label">Cantidad de cupos</InputLabel>
         <Select
           labelid="cantidad-label"
@@ -101,12 +101,12 @@ export const CreateSingleTravelForm = () => {
         </Select>
       </FormControl>
 
-      <FormControl fullWidth style={{marginBlock: '10px'}}>
+      <FormControl fullWidth className='form-control-m'>
         <Input labelid='fecha-label' type="date" onChange={handleChange} required name="fecha" />
       </FormControl>
 
-      <FormControl fullWidth style={{marginBlock: '10px'}}>
-      <Button variant="outlined" onClick={Submit}>Agregar</Button>
+      <FormControl fullWidth className='form-control-m'>
+        <Button variant="outlined" onClick={Submit}>Agregar</Button>
       </FormControl>
     </Box>
   );

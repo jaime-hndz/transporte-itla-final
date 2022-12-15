@@ -38,7 +38,7 @@ export const ModifyTravelForm = ({viaje}) => {
 
   return (
     <Box sx={{ minWidth: 120, marginBlock: 3 }}>
-      <FormControl fullWidth style={{marginBlock: '10px'}} size="small" >    
+      <FormControl fullWidth className='form-control-m' size="small" >    
         <InputLabel id="ruta-label">Ruta</InputLabel>
         <Select
           labelid="ruta-label"
@@ -57,7 +57,7 @@ export const ModifyTravelForm = ({viaje}) => {
         </Select>
       </FormControl>
 
-      <FormControl fullWidth style={{marginBlock: '10px'}} size="small">
+      <FormControl fullWidth className='form-control-m' size="small">
         <InputLabel id="horario-label">Horario</InputLabel>
         <Select
           labelid="horario-label"
@@ -80,7 +80,7 @@ export const ModifyTravelForm = ({viaje}) => {
         </Select>
       </FormControl>
 
-      <FormControl fullWidth style={{marginBlock: '10px'}} size="small">
+      <FormControl fullWidth className='form-control-m' size="small">
         <InputLabel id="cantidad-label">Cantidad de cupos</InputLabel>
         <Select
           labelid="cantidad-label"
@@ -94,12 +94,12 @@ export const ModifyTravelForm = ({viaje}) => {
         </Select>
       </FormControl>
 
-      <FormControl fullWidth style={{marginBlock: '10px'}}>
+      <FormControl fullWidth className='form-control-m'>
         <Input defaultValue={moment(formValues.fecha).utc().format("yyyy-MM-DD")} labelid='fecha-label' type="date" onChange={handleChange} required name="fecha" />
       </FormControl>
 
-      <FormControl fullWidth style={{marginBlock: '10px'}}>
-      <Button variant="outlined" onClick={Submit}>Editar</Button>
+      <FormControl fullWidth className='form-control-m'>
+        <Button variant="outlined" onClick={Submit}>Editar</Button>
       </FormControl>
     </Box>
   );

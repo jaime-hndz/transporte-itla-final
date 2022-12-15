@@ -31,7 +31,7 @@ export const CheckTravels = ({viaje}) => {
   const [data, setData] = useState('Sin resultado');
   return (
     <div>
-      <div style={{width: '500px', marginInline: 'auto'}}>
+      <div className='check-travel-div'>
         <QrReader
           onResult={(result, error) => {
             if (!!result) {
@@ -42,7 +42,7 @@ export const CheckTravels = ({viaje}) => {
           style={previewStyle}
           />
       </div>
-      <div style={{width: '500px', marginInline: 'auto', display: 'flex'}}>
+      <div className='check-travel-div flx'>
         <div>
           <p>Revisando estudiante:</p>
           <h3>{data}</h3>
