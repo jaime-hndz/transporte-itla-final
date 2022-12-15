@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Data.Common;
 using System.Linq;
+using System.Net.Mail;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis;
 using Microsoft.EntityFrameworkCore;
 using transporte_backend.Models;
 
@@ -68,6 +70,20 @@ namespace transporte_backend.Controllers
             }
 
             _context.Entry(viaje).State = EntityState.Modified;
+
+            var tickets = _context.Tickets
+                .Where(u => u.IdViaje == id)
+                .Include(u => u.IdEstudianteNavigation.IdUsuarioNavigation)
+                .ToList();
+            var estudiantes = new List<string>();
+
+            foreach (var item in tickets)
+            {
+                estudiantes.Add(item.IdEstudianteNavigation.IdUsuarioNavigation.Email);
+            }
+
+            NotificarUsuarios(estudiantes);
+
 
             try
             {
@@ -157,6 +173,54 @@ namespace transporte_backend.Controllers
         private bool ViajeExists(int id)
         {
             return _context.Viajes.Any(e => e.IdViaje == id);
+        }
+
+        private void NotificarUsuarios(List<string> userMails)
+        {
+            string MailOrigen = "transporteitla.noreply@gmail.com";
+            string MailDestino = "jaime25112002@gmail.com";
+            string Contra = "mqjnheevfhhpqyhj";
+
+            MailMessage oMailMessage = new MailMessage();
+
+            oMailMessage.Subject = "Notificación de modificación en viaje";
+            oMailMessage.Body = @"
+                 <div style=""color:black"">
+                     <b> Se ha realizado una modificación en uno de los viajes que solicitaste en la plataforma de trasporte ITLA.</b>
+                </div>
+                <br />
+                <a href='https://transporte.itla.edu.do/transporte/login'>Haz click aquí para ir a revisar tus solicitudes.</a> 
+            ";
+            oMailMessage.From = new MailAddress(MailOrigen);
+
+            foreach (var item in userMails)
+            {
+                oMailMessage.To.Add(item);
+            }
+
+            oMailMessage.IsBodyHtml = true;
+
+            SmtpClient oSmtpClient = new SmtpClient("smtp.gmail.com");
+            oSmtpClient.EnableSsl = true;
+            oSmtpClient.UseDefaultCredentials = false;
+            oSmtpClient.Host = "smtp.gmail.com";
+
+            oSmtpClient.Port = 587;
+            oSmtpClient.Credentials = new System.Net.NetworkCredential(MailOrigen, Contra);
+
+            try
+            {
+                 oSmtpClient.Send(oMailMessage);
+
+            }
+            catch (Exception e)
+            {
+
+                throw e;
+            }
+
+            oSmtpClient.Dispose();
+
         }
     }
 }
