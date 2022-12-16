@@ -8,6 +8,11 @@ body {
     position: relative;
     /* padding-bottom: 20rem; */
     font-family: 'Roboto', sans-serif;
+    background: url("../resources/fondo.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .footer {
@@ -32,6 +37,7 @@ a{
 .allContainer{
     max-height: calc(100vh - 87px);
     overflow-y: auto;
+    background: #1b75ae !important;
 }
 
 .page-title{
@@ -51,3 +57,4 @@ a{
 .mi-auto{
     margin-inline: auto;
 }
+
