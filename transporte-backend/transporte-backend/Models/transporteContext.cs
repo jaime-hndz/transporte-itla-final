@@ -30,7 +30,7 @@ namespace transporte_backend.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=LAPTOP-O4IATO9T\\MSSQLSERVER01;Database=transporte; Trusted_Connection=true;");
+                optionsBuilder.UseSqlServer("workstation id=transporte-itla.mssql.somee.com;packet size=4096;user id=jaime251102_SQLLogin_1;pwd=slhl2597v7;data source=transporte-itla.mssql.somee.com;persist security info=False;initial catalog=transporte-itla");
             }
         }
 

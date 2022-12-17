@@ -75,14 +75,19 @@ namespace transporte_backend.Controllers
                 .Where(u => u.IdViaje == id)
                 .Include(u => u.IdEstudianteNavigation.IdUsuarioNavigation)
                 .ToList();
-            var estudiantes = new List<string>();
 
-            foreach (var item in tickets)
+            if (tickets.Count() > 0)
             {
-                estudiantes.Add(item.IdEstudianteNavigation.IdUsuarioNavigation.Email);
+                var estudiantes = new List<string>();
+
+                foreach (var item in tickets)
+                {
+                    estudiantes.Add(item.IdEstudianteNavigation.IdUsuarioNavigation.Email);
+                }
+
+                NotificarUsuarios(estudiantes);
             }
 
-            NotificarUsuarios(estudiantes);
 
 
             try

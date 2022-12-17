@@ -19,7 +19,7 @@ export const LogOut = ({ usuario }) => {
   
   const LoggingOut = () => {
     cookies.remove("usuario", { path: "/" });
-    window.location.href = "./login";
+    window.location.href = "./";
   };
 
   const ToBalance = () => {

@@ -1,4 +1,4 @@
-import { IconButton } from '@mui/material'
+import { IconButton, Tooltip } from '@mui/material'
 import RemoveRoadIcon from '@mui/icons-material/RemoveRoad';
 import {fetchApi} from '../../helpers/fetchApi'
 import { useNotification } from '../../context/notification.context';
@@ -26,6 +26,8 @@ export const DeleteTravel = ({id}) => {
   }
   
   return (
-    <IconButton color='error' onClick={deleteTravel}><RemoveRoadIcon /></IconButton>
+    <Tooltip title='Eliminar'>
+      <IconButton color='error' onClick={deleteTravel}><RemoveRoadIcon /></IconButton>
+    </Tooltip>
   )
 }

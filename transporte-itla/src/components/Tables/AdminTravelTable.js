@@ -5,6 +5,7 @@ import { FooterButton } from "../Utils/FooterButton";
 import moment from "moment";
 import { Actions } from "../Utils/Actions.js";
 import { useNotification } from '../../context/notification.context';
+import { useNavigate } from "react-router-dom";
 
 const columns = [
   {
@@ -51,6 +52,7 @@ const columns = [
 export const AdminTravelTable = () => {
   const [selectionModel, setSelectionModel] = useState([]);
   const [viajes, setViajes] = useState([]);
+  const navigate = useNavigate();
 
   const { getNotification } = useNotification()
 
@@ -61,15 +63,20 @@ export const AdminTravelTable = () => {
 
   const EliminarViajes = async () => {
     console.log(selectionModel);
-    await fetchApi(`viajes/deleteviajes`, selectionModel, "DELETE")
+
+    if(window.confirm('Desea elminar los viajes seleccionados?')){
+      await fetchApi(`viajes/deleteviajes`, selectionModel, "DELETE")
       .then((response) => {
         getNotification("Se ha eliminado correctamente", "success")
         console.log(response.data);
+        navigate(0)
       })
       .catch((error) => {
         getNotification("Ha ocurrido un error", "error")
         console.log(error);
       });
+    }
+
   };
 
   const handleLoad = async () => {
