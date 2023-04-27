@@ -12,5 +12,6 @@ Frequently asked questions
 The ability to use the user balance to pay for the ticket.
 Allows administrators to validate the ticket with a qr-code.
 
-
-![itla-transporte](https://user-images.githubusercontent.com/59671227/234976888-f43a4bed-c31a-498c-81df-d5a81087d5be.png)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/59671227/234976888-f43a4bed-c31a-498c-81df-d5a81087d5be.png)"/>
+</p>
