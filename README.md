@@ -1,4 +1,4 @@
-﻿#Transporte-itla-final
+#Transporte-itla-final
 
 Application that improves the ITLA ticketing platform. It consists of two parts: the frontend and the backend. The frontend is made with react and the backend with C#.
 
