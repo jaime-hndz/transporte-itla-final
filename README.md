@@ -13,5 +13,5 @@ The ability to use the user balance to pay for the ticket.
 Allows administrators to validate the ticket with a qr-code.
 
 <p align="center">
-![itla-transporte](https://user-images.githubusercontent.com/59671227/234977077-7dd1a9c7-5e95-4766-a332-8a73c306777b.png)
+<img src="https://user-images.githubusercontent.com/59671227/234977077-7dd1a9c7-5e95-4766-a332-8a73c306777b.png">
 </p>
