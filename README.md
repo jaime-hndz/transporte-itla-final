@@ -12,7 +12,7 @@ Frequently asked questions
 The ability to use the user balance to pay for the ticket.
 Allows administrators to validate the ticket with a qr-code.
 
-You can see the project showcase <a target="_blank" href="https://www.youtube.com/watch?v=Nl7kHoIO6UE"> here <a/>
+You can see the project showcase <a  href="https://www.youtube.com/watch?v=Nl7kHoIO6UE" target="_blank"> here <a/>
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/59671227/234977077-7dd1a9c7-5e95-4766-a332-8a73c306777b.png">
